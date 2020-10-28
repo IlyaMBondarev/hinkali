@@ -87,3 +87,51 @@ document.querySelectorAll('.slider').forEach(slider => {
             }
     }, 10000)
 })
+let citySelects = document.querySelectorAll('.city-select');
+
+citySelects.forEach(block => {
+    let dropBtn = block.querySelector('.city-select__drop-btn');
+    let current = dropBtn.querySelector('.city-select__current');
+    let arrow = dropBtn.querySelector('.city-select__arrow');
+    let dropBlock = block.querySelector('.city-select__drop');
+    let closeBtn = dropBlock.querySelector('.city-select__close');
+    let citySelected = dropBlock.querySelector('.city-select__city-selected');
+    let cities = dropBlock.querySelectorAll('.city-select__city')
+    dropBtn.addEventListener('click', () => {
+        dropBlock.classList.toggle('city-select__dropped');
+        arrow.classList.toggle('city-select__arrow-up');
+    });
+    closeBtn.addEventListener('click', () => {
+        dropBlock.classList.remove('city-select__dropped');
+        arrow.classList.remove('city-select__arrow-up');
+    });
+    cities.forEach(city => {
+        city.addEventListener('click', () => {
+            current.textContent = city.textContent;
+            dropBlock.classList.remove('city-select__dropped');
+            arrow.classList.remove('city-select__arrow-up');
+            citySelected = city;
+            citySelected.classList.add('city-select__city-selected');
+        });
+        city.addEventListener('mouseover', () => {
+            citySelected.classList.remove('city-select__city-selected');
+        });
+        city.addEventListener('mouseout', () => {
+            citySelected.classList.add('city-select__city-selected');
+        });
+    })
+})
+/*
+
+document.querySelectorAll('.product__add').forEach(button => {
+    button.addEventListener('mouseover', (event) => {
+        button.innerHTML += "<span class='ripple-effect'>";
+        let effect = button.querySelectorAll('span:last-child')[0];
+        effect.style.left = `${event.pageX - button.pageX}px`;
+        effect.style.top = `${event.pageY - button.pageY}px`;
+        effect.style.transform = 'scale(100)';
+        effect.style.opacity = '0';
+    })
+})
+
+*/

@@ -19,11 +19,40 @@
             </div>
             <div class="header__content">
                 <div class="header__column header__left">
-                    <select name="city" class="header__city-select">
-                        <option value="Москва">Москва</option>
-                        <option value="Санкт-Петербург">Санкт-Петербург</option>
-                        <option value="Другой">Другой</option>
-                    </select>
+                    <div class="header__city-select city-select">
+                        <button class="city-select__drop-btn">
+                            <span class="city-select__current">Москва</span>
+                            <i class="fa fa-chevron-down city-select__arrow"></i>
+                        </button>
+                        <div class="city-select__drop">
+                            <button class="city-select__close">+</button>
+                            <ul class="city-select__list">
+                                <li class="city-select__city city-select__city-selected">Москва</li>
+                                <li class="city-select__city">Санкт-Петербург</li>
+                                <li class="city-select__city">Новосибирск</li>
+                                <li class="city-select__city">Екатеринбург</li>
+                                <li class="city-select__city">Казань</li>
+                                <li class="city-select__city">Нижний Новгород</li>
+                                <li class="city-select__city">Челябинск</li>
+                            </ul>
+                            <ul class="city-select__list">
+                                <li class="city-select__city">Самара</li>
+                                <li class="city-select__city">Омск</li>
+                                <li class="city-select__city">Ростов-на-Дону</li>
+                                <li class="city-select__city">Уфа</li>
+                                <li class="city-select__city">Красноярск</li>
+                                <li class="city-select__city">Воронеж</li>
+                            </ul>
+                            <ul class="city-select__list">
+                                <li class="city-select__city">Пермь</li>
+                                <li class="city-select__city">Волгоград</li>
+                                <li class="city-select__city">Краснодар</li>
+                                <li class="city-select__city">Саратов</li>
+                                <li class="city-select__city">Тюмень</li>
+                                <li class="city-select__city">Тольятти</li>
+                            </ul>
+                        </div>
+                    </div>
                     <p class="header__text">Доставка с 10.00 до 22.00</p>
                 </div>
                 <div class="header__column header__center">
@@ -124,7 +153,7 @@
             </div>
             <div class="products container">
                 <div class="products__title">
-                    <a href="#"><span class="products__name">Хинкали</span><span class="products__name-arrow">→</span><span class="products__name-after">перейти!</span></a>
+                    <a href="#"><span class="products__name">Хинкали</span><span class="products__name-arrow">→</span><span class="products__name-after"><span>п</span><span>е</span><span>р</span><span>е</span><span>й</span><span>т</span><span>и</span><span>!</span></span></a>
                 </div>
                 <div class="products__block">
                     <div class="products__product product product__on-sale">
@@ -450,7 +479,7 @@
             </div>
             <div class="products container">
                 <div class="products__title">
-                    <a href="#"><span class="products__name">Хачапури</span><span class="products__name-arrow">→</span><span class="products__name-after">перейти!</span></a>
+                    <a href="#"><span class="products__name">Хачапури</span><span class="products__name-arrow">→</span><span class="products__name-after"><span>п</span><span>е</span><span>р</span><span>е</span><span>й</span><span>т</span><span>и</span><span>!</span></span></a>
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
@@ -573,7 +602,7 @@
             </div>
             <div class="products container">
                 <div class="products__title">
-                    <a href="#"><span class="products__name">Шашлыки</span><span class="products__name-arrow">→</span><span class="products__name-after">перейти!</span></a>
+                    <a href="#"><span class="products__name">Шашлыки</span><span class="products__name-arrow">→</span><span class="products__name-after"><span>п</span><span>е</span><span>р</span><span>е</span><span>й</span><span>т</span><span>и</span><span>!</span></span></a>
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
@@ -812,7 +841,7 @@
             </div>
             <div class="products container">
                 <div class="products__title">
-                    <a href="#"><span class="products__name">Соусы</span><span class="products__name-arrow">→</span><span class="products__name-after">перейти!</span></a>
+                    <a href="#"><span class="products__name">Соусы</span><span class="products__name-arrow">→</span><span class="products__name-after"><span>п</span><span>е</span><span>р</span><span>е</span><span>й</span><span>т</span><span>и</span><span>!</span></span></a>
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
@@ -935,7 +964,7 @@
             </div>
             <div class="products container">
                 <div class="products__title">
-                    <a href="#"><span class="products__name">Закуски</span><span class="products__name-arrow">→</span><span class="products__name-after">перейти!</span></a>
+                    <a href="#"><span class="products__name">Закуски</span><span class="products__name-arrow">→</span><span class="products__name-after"><span>п</span><span>е</span><span>р</span><span>е</span><span>й</span><span>т</span><span>и</span><span>!</span></span></a>
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
@@ -1406,7 +1435,7 @@
             </div>
             <div class="products container">
                 <div class="products__title">
-                    <a href="#"><span class="products__name">Горячее</span><span class="products__name-arrow">→</span><span class="products__name-after">перейти!</span></a>
+                    <a href="#"><span class="products__name">Горячее</span><span class="products__name-arrow">→</span><span class="products__name-after"><span>п</span><span>е</span><span>р</span><span>е</span><span>й</span><span>т</span><span>и</span><span>!</span></span></a>
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
@@ -1645,7 +1674,7 @@
             </div>
             <div class="products container">
                 <div class="products__title">
-                    <a href="#"><span class="products__name">Супы</span><span class="products__name-arrow">→</span><span class="products__name-after">перейти!</span></a>
+                    <a href="#"><span class="products__name">Супы</span><span class="products__name-arrow">→</span><span class="products__name-after"><span>п</span><span>е</span><span>р</span><span>е</span><span>й</span><span>т</span><span>и</span><span>!</span></span></a>
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
@@ -1768,7 +1797,7 @@
             </div>
             <div class="products container">
                 <div class="products__title">
-                    <a href="#"><span class="products__name">Салаты</span><span class="products__name-arrow">→</span><span class="products__name-after">перейти!</span></a>
+                    <a href="#"><span class="products__name">Салаты</span><span class="products__name-arrow">→</span><span class="products__name-after"><span>п</span><span>е</span><span>р</span><span>е</span><span>й</span><span>т</span><span>и</span><span>!</span></span></a>
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
@@ -1949,7 +1978,7 @@
             </div>
             <div class="products container">
                 <div class="products__title">
-                    <a href="#"><span class="products__name">Десерты</span><span class="products__name-arrow">→</span><span class="products__name-after">перейти!</span></a>
+                    <a href="#"><span class="products__name">Десерты</span><span class="products__name-arrow">→</span><span class="products__name-after"><span>п</span><span>е</span><span>р</span><span>е</span><span>й</span><span>т</span><span>и</span><span>!</span></span></a>
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
@@ -2043,7 +2072,7 @@
             </div>
             <div class="products container">
                 <div class="products__title">
-                    <a href="#"><span class="products__name">Напитки</span><span class="products__name-arrow">→</span><span class="products__name-after">перейти!</span></a>
+                    <a href="#"><span class="products__name">Напитки</span><span class="products__name-arrow">→</span><span class="products__name-after"><span>п</span><span>е</span><span>р</span><span>е</span><span>й</span><span>т</span><span>и</span><span>!</span></span></a>
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
@@ -2106,12 +2135,58 @@
                     </div>
                 </div>
             </div>
-
+            <div class="ceo">
+                <div class="container">
+                    <div class="ceo__column">
+                        <h3>Заголовок текста</h3>
+                        <p>Задача организации, в&nbsp;особенности&nbsp;же начало повседневной работы по&nbsp;формированию позиции требуют от&nbsp;нас анализа модели развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров, соответствует насущным потребностям. Равным образом реализация намеченных плановых заданий играет важную роль в&nbsp;формировании направлений прогрессивного развития.</p>
+                        <h3>Какой-то длинный заголовок текста</h3>
+                        <p>Повседневная практика показывает, что сложившаяся структура организации влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации системы обучения кадров, соответствует насущным потребностям. Разнообразный и&nbsp;богатый опыт консультация с&nbsp;широким активом играет важную роль в&nbsp;формировании существенных финансовых и&nbsp;административных условий.</p>
+                    </div>
+                    <div class="ceo__column">
+                        <h3>Очень длинный заголовок текста, очень длинный заголовок текста, </h3>
+                        <p>Задача организации, в&nbsp;особенности&nbsp;же начало повседневной работы по&nbsp;формированию позиции требуют от&nbsp;нас анализа модели развития. Товарищи! постоянное информационно пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров.</p>
+                        <h3>Еще один длинный заголовок текста</h3>
+                        <p>Не&nbsp;следует, однако забывать, что консультация с&nbsp;широким активом представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по&nbsp;разработке форм развития. Не&nbsp;следует, однако забывать, что укрепление и&nbsp;развитие структуры требуют определения.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="container">
+                <div class="header__row">
+                    <div class="header__logo">
+                        <img src="img/logo_letter.png" alt="logo">
+                    </div>
+                    <div class="header__content">
+                        <div class="header__column header__left">
+                            <select name="city" class="header__city-select">
+                                <option value="Москва">Москва</option>
+                                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                                <option value="Другой">Другой</option>
+                            </select>
+                            <p class="header__text">Доставка с 10.00 до 22.00</p>
+                        </div>
+                        <div class="header__column header__center">
+                            <p class="header__text">Бесплатная доставка</p>
+                            <a href="tel:+74955071777" class="header__phone">+7 (495) 507-17-77</a>
+                            <a href="#" class="header__call-btn">Перезвоните мне</a>
+                        </div>
+                        <div class="header__column header__right">
+                            <a href="#" class="header__link">О компании</a>
+                            <a href="#" class="header__link">Контакты</a>
+                            <a href="#" class="header__link">Франшиза</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 <footer class="footer">
     <div class="container">
         <div class="footer__row">
-
+            <div class="footer__column"><span>Все права защищены &copy; 2019 -2020</span></div>
+            <div class="footer__column"><a href="#"><span>Политика конфиденциальности</span></a></div>
+            <div class="footer__column"><a href="#"><span>Создание сайтов Веб-студия “Тесла”</span></a></div>
         </div>
     </div>
 </footer>    </main>
