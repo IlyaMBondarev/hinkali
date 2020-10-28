@@ -32,11 +32,9 @@
                     <a href="#" class="header__call-btn">Перезвоните мне</a>
                 </div>
                 <div class="header__column header__right">
-                    <ul class="header__list">
-                        <li><a href="#" class="header__link">О компании</a></li>
-                        <li><a href="#" class="header__link">Франшиза</a></li>
-                        <li><a href="#" class="header__link">Контакты</a></li>
-                    </ul>
+                    <a href="#" class="header__link">О компании</a>
+                    <a href="#" class="header__link">Контакты</a>
+                    <a href="#" class="header__link">Франшиза</a>
                 </div>
             </div>
         </div>
@@ -64,9 +62,37 @@
             </button>
         </div>
     </div>
+</nav>
+<nav id="topNav" class="nav">
+    <div class="container">
+        <div class="nav__row">
+            <ul class="nav__menu">
+                <li><a href="#" class="nav__link">Хинкали</a></li>
+                <li><a href="#" class="nav__link">Хачапури</a></li>
+                <li><a href="#" class="nav__link">Шашлыки</a></li>
+                <li><a href="#" class="nav__link">Соусы</a></li>
+                <li><a href="#" class="nav__link">Закуски</a></li>
+                <li><a href="#" class="nav__link">Горячее</a></li>
+                <li><a href="#" class="nav__link">Супы</a></li>
+                <li><a href="#" class="nav__link">Салаты</a></li>
+                <li><a href="#" class="nav__link">Десерты</a></li>
+                <li><a href="#" class="nav__link">Напитки</a></li>
+            </ul>
+            <div class="nav__phone"><a href="tel:+74955071777" class="nav__phone-link">+7 (495) 507-17-77</a></div>
+            <button class="nav__cart-btn cart-btn">
+                <img src="img/icons/food.png" alt="food">
+                <span class="nav__count">10</span>
+                <span class="nav__total">1620 <i class="fa fa-ruble-sign"></i></span>
+            </button>
+        </div>
+    </div>
 </nav>        <div class="content">
             <div class="slider">
                 <div class="slider__slides">
+                    <div class="slider__slide"><!-- должен быть как последний слайд -->
+                        <img class="slider__bg" src="img/bg_first%20screen.jpg" alt="first screen">
+                        <img class="slider__logo" src="img/logo.png" alt="logo">
+                    </div>
                     <div class="slider__slide">
                         <img class="slider__bg" src="img/bg_first%20screen.jpg" alt="first screen">
                         <img class="slider__logo" src="img/logo.png" alt="logo">
@@ -102,9 +128,13 @@
                 </div>
                 <div class="products__block">
                     <div class="products__product product product__on-sale">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хинкали со свининой и говядиной</div>
                         <div class="product__line"></div>
@@ -127,9 +157,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product product__recommend">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <!-- <img src="img/product.jpg" alt="" class="product__image"> -->
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <!-- <img src="img/product.jpg" alt="" class="product__image"> -->
+                            </div>
                         </div>
                         <div class="product__name">Хинкали со свининой и говядиной жареные</div>
                         <div class="product__line"></div>
@@ -152,9 +186,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product product__hit">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хинкали с картошкой и морковью</div>
                         <div class="product__line"></div>
@@ -177,9 +215,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хинкали с индейкой</div>
                         <div class="product__line"></div>
@@ -202,9 +244,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хинкали из баранины</div>
                         <div class="product__line"></div>
@@ -227,9 +273,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хинкали с бараниной жареные</div>
                         <div class="product__line"></div>
@@ -252,9 +302,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хинкали с семгой</div>
                         <div class="product__line"></div>
@@ -277,9 +331,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хинкали с грибами</div>
                         <div class="product__line"></div>
@@ -302,9 +360,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хинкали замороженные</div>
                         <div class="product__line"></div>
@@ -327,9 +389,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Квари с сыром</div>
                         <div class="product__line"></div>
@@ -352,9 +418,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Квари с сыром жареные</div>
                         <div class="product__line"></div>
@@ -384,9 +454,13 @@
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хачапури по-аджарски</div>
                         <div class="product__line"></div>
@@ -409,9 +483,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хачапури по-мергельски</div>
                         <div class="product__line"></div>
@@ -434,9 +512,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хачапури слоеное</div>
                         <div class="product__line"></div>
@@ -459,9 +541,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Хачапури со шпинатом</div>
                         <div class="product__line"></div>
@@ -491,9 +577,13 @@
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Люля-кебаб</div>
                         <div class="product__line"></div>
@@ -516,9 +606,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Шашлык из индейки</div>
                         <div class="product__line"></div>
@@ -541,9 +635,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Шашлык из баранины</div>
                         <div class="product__line"></div>
@@ -566,9 +664,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Крылья куринные</div>
                         <div class="product__line"></div>
@@ -591,9 +693,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Шашлык из курицы</div>
                         <div class="product__line"></div>
@@ -616,9 +722,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Ребра свиные</div>
                         <div class="product__line"></div>
@@ -641,9 +751,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Шашлык из свинины</div>
                         <div class="product__line"></div>
@@ -666,9 +780,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Шашлык из телятины</div>
                         <div class="product__line"></div>
@@ -698,9 +816,13 @@
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Сметана</div>
                         <div class="product__line"></div>
@@ -723,9 +845,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Цахтон</div>
                         <div class="product__line"></div>
@@ -748,9 +874,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Нашарап</div>
                         <div class="product__line"></div>
@@ -773,9 +903,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Ткемали</div>
                         <div class="product__line"></div>
@@ -805,9 +939,13 @@
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Ассорти</div>
                         <div class="product__line"></div>
@@ -830,9 +968,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Пхали из лобио</div>
                         <div class="product__line"></div>
@@ -855,9 +997,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Пхали шпинат</div>
                         <div class="product__line"></div>
@@ -880,9 +1026,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Рулетики из баклажан</div>
                         <div class="product__line"></div>
@@ -905,9 +1055,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Долма</div>
                         <div class="product__line"></div>
@@ -930,9 +1084,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Джон джоли</div>
                         <div class="product__line"></div>
@@ -955,9 +1113,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Кучмачи</div>
                         <div class="product__line"></div>
@@ -980,9 +1142,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Лобио</div>
                         <div class="product__line"></div>
@@ -1005,9 +1171,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Сырное ассорти</div>
                         <div class="product__line"></div>
@@ -1030,9 +1200,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Сыр сулугуни</div>
                         <div class="product__line"></div>
@@ -1055,9 +1229,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Сыр имеретинский</div>
                         <div class="product__line"></div>
@@ -1080,9 +1258,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Сыр игрельский</div>
                         <div class="product__line"></div>
@@ -1105,9 +1287,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Оджапсандали</div>
                         <div class="product__line"></div>
@@ -1130,9 +1316,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Овощи на гриле</div>
                         <div class="product__line"></div>
@@ -1155,9 +1345,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Сациви</div>
                         <div class="product__line"></div>
@@ -1180,9 +1374,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Грибные шапочки</div>
                         <div class="product__line"></div>
@@ -1212,9 +1410,13 @@
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Цыплёнок по-чкмерски</div>
                         <div class="product__line"></div>
@@ -1237,9 +1439,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Оджахури</div>
                         <div class="product__line"></div>
@@ -1262,9 +1468,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Цыплёнок тапака</div>
                         <div class="product__line"></div>
@@ -1287,9 +1497,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Чашушули</div>
                         <div class="product__line"></div>
@@ -1312,9 +1526,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Чахохбили</div>
                         <div class="product__line"></div>
@@ -1337,9 +1555,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Семга</div>
                         <div class="product__line"></div>
@@ -1362,9 +1584,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Шампиньоны</div>
                         <div class="product__line"></div>
@@ -1387,9 +1613,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Картофель</div>
                         <div class="product__line"></div>
@@ -1419,9 +1649,13 @@
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Борщ</div>
                         <div class="product__line"></div>
@@ -1444,9 +1678,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Солянка</div>
                         <div class="product__line"></div>
@@ -1469,9 +1707,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Харчо</div>
                         <div class="product__line"></div>
@@ -1494,9 +1736,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Куринный</div>
                         <div class="product__line"></div>
@@ -1526,9 +1772,13 @@
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Греческий</div>
                         <div class="product__line"></div>
@@ -1551,9 +1801,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Цезарь с креветками</div>
                         <div class="product__line"></div>
@@ -1576,9 +1830,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Цезарь с курицей</div>
                         <div class="product__line"></div>
@@ -1601,9 +1859,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Салат по-грузински</div>
                         <div class="product__line"></div>
@@ -1626,9 +1888,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Салат по-домашнему</div>
                         <div class="product__line"></div>
@@ -1651,9 +1917,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Овощное ассорти</div>
                         <div class="product__line"></div>
@@ -1683,9 +1953,13 @@
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Медовик (большой)</div>
                         <div class="product__line"></div>
@@ -1708,9 +1982,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Медовик</div>
                         <div class="product__line"></div>
@@ -1733,9 +2011,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Наполеон</div>
                         <div class="product__line"></div>
@@ -1765,9 +2047,13 @@
                 </div>
                 <div class="products__block">
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Компот</div>
                         <div class="product__line"></div>
@@ -1790,9 +2076,13 @@
                         <button class="product__add">+ в корзину</button>
                     </div>
                     <div class="products__product product">
-                        <div class="product__image-bg">
-                            <img src="img/no_photo.jpg" alt="no-photo">
-                            <img src="img/product.jpg" alt="" class="product__image">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
                         </div>
                         <div class="product__name">Лимонад (в ассортименте)</div>
                         <div class="product__line"></div>
@@ -1816,7 +2106,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
 <footer class="footer">
     <div class="container">
