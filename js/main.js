@@ -3,47 +3,56 @@ document.querySelector('.wrapper').classList.add('loaded');
 
 window.onscroll = function() {
     myScroll()
+    closeCarts();
 }
 
-function _scroll(menu, b, c){
-    const d = document.getElementById(menu);
+function closeCarts() {
+    carts.forEach(cart => {
+        cart.querySelector('.cart').classList.remove('cart-opened');
+    })
+}
+
+function _scroll(block, b, c){
+    const d = document.getElementById(block);
     let e = document.body.scrollTop > 200 || document.documentElement.scrollTop > 200;
     if(b == 'slideDown'){
         if(e){
-            d.style.top = '0'
+            d.style.top = '0';
         }
         else{
-            d.style.top = c
+            d.style.top = c;
+
         }
     }
     else if(b == 'slideUp'){
         if(e){
-            d.style.bottom = '0'
+            d.style.bottom = '0';
         }
         else{
-            d.style.bottom = c
+            d.style.bottom = c;
         }
     }
     else if(b == 'slideLeft'){
         if(e){
-            d.style.left = '0'
+            d.style.left = '0';
         }
         else{
-            d.style.left = c
+            d.style.left = c;
         }
     }
     else{
         if(e){
-            d.style.right = '0'
+            d.style.right = '0';
         }
         else{
-            d.style.right = c
+            d.style.right = c;
         }
     }
 }
 
 function myScroll() {
-    _scroll('topNav', 'slideDown', '-350px')
+    _scroll('topNav', 'slideDown', '-350px');
+
 }
 
 
@@ -130,25 +139,22 @@ let popupCallbackCloseBtn = popupCallbackBackground.querySelector('.popup-callba
 popupCallbackOpenBtns.forEach(button => {
     button.addEventListener('click', () => {
         popupCallbackBackground.classList.add('popup-callback-bg-visible');
-        document.querySelector('body').style.overflow = 'hidden';
     });
 })
 
 popupCallbackBackground.addEventListener('click', (event) => {
     if (event.target === popupCallbackBackground) {
         popupCallbackBackground.classList.remove('popup-callback-bg-visible');
-        document.querySelector('body').style.overflow = '';
     }
 });
 
 popupCallbackCloseBtn.addEventListener('click', (event) => {
     popupCallbackBackground.classList.remove('popup-callback-bg-visible');
-    document.querySelector('body').style.overflow = '';
 });
 
 
 
-// validation
+// валидация
 
 const popupCallbackForm = document.getElementById('popupCallbackForm');
 popupCallbackForm.addEventListener('submit', formSend);
@@ -207,6 +213,16 @@ phones.forEach(phone => phone.addEventListener("input", mask, false));
 phones.forEach(phone => phone.addEventListener("focus", mask, false));
 phones.forEach(phone => phone.addEventListener("blur", mask, false));
 
+
+//корзина
+
+let carts = document.querySelectorAll('.cart-block');
+
+carts.forEach(cart => {
+    let button = cart.querySelector('.cart-btn');
+    let cartBlock = cart.querySelector('.cart');
+    button.addEventListener('click', () => cartBlock.classList.toggle('cart-opened'));
+})
 /*
 
 document.querySelectorAll('.product__add').forEach(button => {
@@ -221,3 +237,63 @@ document.querySelectorAll('.product__add').forEach(button => {
 })
 
 */
+
+
+const isMobile = window.navigator.userAgent.match(/Mobile/) && window.navigator.userAgent.match(/Mobile/)[0] === "Mobile";
+const event = isMobile ? "touchstart" : "mouseover";
+
+const button = document.querySelectorAll('*[data-animation="ripple"]'),
+    container = document.querySelector(".container");
+
+for (let i = 0; i < button.length; i++) {
+    const currentBtn = button[i];
+
+    currentBtn.addEventListener(event, function(e) {
+
+        e.preventDefault();
+        const button = e.target,
+            rect = button.getBoundingClientRect(),
+            originalBtn = this,
+            btnHeight = rect.height,
+            btnWidth = rect.width;
+        let posMouseX = 0,
+            posMouseY = 0;
+
+        if (isMobile) {
+            posMouseX = e.changedTouches[0].pageX - rect.left;
+            posMouseY = e.changedTouches[0].pageY - rect.top;
+        } else {
+            posMouseX = e.x - rect.left;
+            posMouseY = e.y - rect.top;
+        }
+
+        const baseCSS =  `position: absolute;
+                                            width: ${btnWidth * 2}px;
+                                            height: ${btnWidth * 2}px;
+                                            transition: all linear 700ms;
+                                            transition-timing-function:cubic-bezier(0.250, 0.460, 0.450, 0.940);
+                                            border-radius: 50%;
+                                            background: var(--color-ripple);
+                                            top:${posMouseY - btnWidth}px;
+                                            left:${posMouseX - btnWidth}px;
+                                            pointer-events: none;
+                                            transform:scale(0)`
+
+        var rippleEffect = document.createElement("span");
+        rippleEffect.style.cssText = baseCSS;
+
+        //prepare the dom
+        currentBtn.style.overflow = "hidden";
+        this.appendChild(rippleEffect);
+
+        //start animation
+        setTimeout( function() {
+            rippleEffect.style.cssText = baseCSS + `transform:scale(1); opacity: 0;`;
+        }, 5);
+
+        setTimeout( function() {
+            rippleEffect.remove();
+            //window.location.href = currentBtn.href;
+        },700);
+    })
+}

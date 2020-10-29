@@ -62,6 +62,11 @@ button, a {
   cursor: pointer;
 }
 
+button {
+  -webkit-user-select: none;
+          user-select: none;
+}
+
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -96,6 +101,15 @@ input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
+}
+
+*[data-animation=ripple] {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: block;
+  outline: none;
+  --color-ripple: rgba(255, 255, 255, 0.8);
 }
 
 .container {
@@ -440,6 +454,9 @@ input[type=number]::-webkit-inner-spin-button {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   z-index: 500;
   display: none;
 }
@@ -509,6 +526,165 @@ input[type=number]::-webkit-inner-spin-button {
   letter-spacing: 0.61px;
   border-radius: 10px;
   background-color: #f44601;
+}
+
+.cart-block {
+  position: relative;
+}
+
+.cart {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 165%;
+  box-shadow: 7px 9px 21px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+  z-index: 500;
+  padding: 30px 13px 30px 30px;
+}
+.cart-opened {
+  display: block;
+}
+.cart__items {
+  max-height: 276px;
+  overflow: hidden auto;
+  padding-right: 18px;
+}
+.cart__items::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+.cart__items::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+.cart__item {
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 14px;
+  padding-top: 14px;
+}
+.cart__result {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 28px;
+  margin-top: 9px;
+}
+.cart__content {
+  font-family: "meiryob";
+  color: #2f2f2f;
+  font-size: 18px;
+  letter-spacing: 0.55px;
+}
+.cart__total {
+  font-family: "meiryob";
+  color: #2f2f2f;
+  font-size: 23px;
+  letter-spacing: 0.49px;
+}
+.cart__button {
+  margin-top: 28px;
+  margin-right: 20px;
+}
+.cart__submit {
+  margin: 0 auto;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 0;
+  font-weight: 400;
+  letter-spacing: 0.61px;
+  border-radius: 10px;
+  background-color: #f44601;
+  position: relative;
+  overflow: hidden;
+}
+
+.item {
+  max-height: 92px;
+}
+.item__image {
+  border-radius: 10px;
+  background-color: #ececec;
+  margin-right: 11px;
+}
+.item__image > img {
+  border-radius: 10px;
+  height: 64px;
+}
+.item__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 220px;
+}
+.item__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.item__name {
+  color: #121212;
+  font-size: 14px;
+  letter-spacing: 0.43px;
+  line-height: 12px;
+}
+.item__name:hover {
+  color: #f54500;
+}
+.item__clear {
+  background-color: transparent;
+}
+.item__clear > img {
+  width: 25px;
+}
+.item__counts {
+  background-color: #f4f2f3;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+}
+.item__counts > * {
+  width: 33.3333333333%;
+}
+.item__count {
+  text-align: center;
+  font-size: 11px;
+  color: #121212;
+  cursor: default;
+}
+.item__count-less {
+  padding: 6px 0;
+  color: #121212;
+  font-size: 11px;
+  line-height: 11px;
+  border-radius: 4px 0 0 4px;
+  background-color: transparent;
+}
+.item__count-less:hover {
+  color: #ffffff;
+  background-color: #f44601;
+}
+.item__count-more {
+  padding: 6px 0;
+  color: #121212;
+  font-size: 11px;
+  line-height: 11px;
+  border-radius: 0 4px 4px 0;
+  background-color: transparent;
+}
+.item__count-more:hover {
+  color: #ffffff;
+  background-color: #f44601;
+}
+.item__price {
+  color: #121212;
+  font-family: "meiryob";
+  font-size: 16px;
 }
 
 .footer {
@@ -756,6 +932,7 @@ input[type=number]::-webkit-inner-spin-button {
   text-align: center;
   font-size: 20px;
   color: #121212;
+  cursor: default;
 }
 .product__count-less {
   padding: 12px 0;
@@ -811,11 +988,15 @@ input[type=number]::-webkit-inner-spin-button {
   width: 100%;
 }
 .product__add {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.product__submit {
   margin: 0 auto;
   display: block;
-  padding: 10px 53px 10px 63px;
   color: #ffffff;
   font-size: 20px;
+  padding: 10px 0;
   font-weight: 400;
   letter-spacing: 0.61px;
   border-radius: 10px;

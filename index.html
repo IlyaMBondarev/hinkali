@@ -59,7 +59,7 @@
                 <div class="header__column header__center">
                     <p class="header__text">Бесплатная доставка</p>
                     <a href="tel:+74955071777" class="header__phone">+7 (495) 507-17-77</a>
-                    <a href="#" class="header__call-btn popup-callback-open-btn">Перезвоните мне</a>
+                    <button class="header__call-btn popup-callback-open-btn">Перезвоните мне</button>
                 </div>
                 <div class="header__column header__right">
                     <a href="#" class="header__link">О компании</a>
@@ -85,11 +85,119 @@
                 <li><a href="#" class="nav__link">Десерты</a></li>
                 <li><a href="#" class="nav__link">Напитки</a></li>
             </ul>
-            <button class="nav__cart-btn cart-btn">
-                <img src="img/icons/food.png" alt="food">
-                <span class="nav__count">10</span>
-                <span class="nav__total">1620 <i class="fa fa-ruble-sign"></i></span>
-            </button>
+            <div class="header__cart-block cart-block">
+                <button class="nav__cart-btn cart-btn">
+                    <img src="img/icons/food.png" alt="food">
+                    <span class="nav__count">10</span>
+                    <span class="nav__total">1620 <i class="fa fa-ruble-sign"></i></span>
+                </button>
+                <div class="cart">
+                    <div class="cart__items">
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear"><img src="img/icons/clear.svg" alt="clear"></button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear"><img src="img/icons/clear.svg" alt="clear"></button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear"><img src="img/icons/clear.svg" alt="clear"></button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear"><img src="img/icons/clear.svg" alt="clear"></button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear"><img src="img/icons/clear.svg" alt="clear"></button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__result">
+                        <div class="cart__content">Сумма заказа:</div>
+                        <div class="cart__total"><span>4050</span> <i class="fa fa-ruble-sign"></i></div>
+                    </div>
+                    <div class="cart__button">
+                        <button class="cart__submit" data-animation="ripple">офрмить заказ</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
@@ -109,11 +217,119 @@
                 <li><a href="#" class="nav__link">Напитки</a></li>
             </ul>
             <div class="nav__phone"><a href="tel:+74955071777" class="nav__phone-link">+7 (495) 507-17-77</a></div>
-            <button class="nav__cart-btn cart-btn">
-                <img src="img/icons/food.png" alt="food">
-                <span class="nav__count">10</span>
-                <span class="nav__total">1620 <i class="fa fa-ruble-sign"></i></span>
-            </button>
+            <div class="header__cart-block cart-block">
+                <button class="nav__cart-btn cart-btn">
+                    <img src="img/icons/food.png" alt="food">
+                    <span class="nav__count">10</span>
+                    <span class="nav__total">1620 <i class="fa fa-ruble-sign"></i></span>
+                </button>
+                <div class="cart">
+                    <div class="cart__items">
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear"><img src="img/icons/clear.svg" alt="clear"></button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear"><img src="img/icons/clear.svg" alt="clear"></button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear"><img src="img/icons/clear.svg" alt="clear"></button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear"><img src="img/icons/clear.svg" alt="clear"></button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear"><img src="img/icons/clear.svg" alt="clear"></button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__result">
+                        <div class="cart__content">Сумма заказа:</div>
+                        <div class="cart__total"><span>4050</span> <i class="fa fa-ruble-sign"></i></div>
+                    </div>
+                    <div class="cart__button">
+                        <button class="cart__submit" data-animation="ripple">офрмить заказ</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </nav>        <div class="popup-callback-bg">
@@ -203,7 +419,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product product__recommend">
                         <div class="product__image-form">
@@ -232,7 +450,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product product__hit">
                         <div class="product__image-form">
@@ -261,7 +481,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -290,7 +512,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -319,7 +543,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -348,7 +574,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -377,7 +605,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -406,7 +636,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -435,7 +667,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -464,7 +698,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -493,7 +729,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -529,7 +767,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -558,7 +798,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -587,7 +829,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -616,7 +860,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -652,7 +898,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -681,7 +929,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -710,7 +960,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -739,7 +991,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -768,7 +1022,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -797,7 +1053,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -826,7 +1084,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -855,7 +1115,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -891,7 +1153,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -920,7 +1184,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -949,7 +1215,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -978,7 +1246,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1014,7 +1284,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1043,7 +1315,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1072,7 +1346,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1101,7 +1377,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1130,7 +1408,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1159,7 +1439,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1188,7 +1470,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1217,7 +1501,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1246,7 +1532,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1275,7 +1563,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1304,7 +1594,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1333,7 +1625,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1362,7 +1656,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1391,7 +1687,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1420,7 +1718,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1449,7 +1749,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1485,7 +1787,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1514,7 +1818,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1543,7 +1849,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1572,7 +1880,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1601,7 +1911,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1630,7 +1942,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1659,7 +1973,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1688,7 +2004,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1724,7 +2042,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1753,7 +2073,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1782,7 +2104,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1811,7 +2135,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1847,7 +2173,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1876,7 +2204,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1905,7 +2235,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1934,7 +2266,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1963,7 +2297,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -1992,7 +2328,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2028,7 +2366,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -2057,7 +2397,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -2086,7 +2428,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2122,7 +2466,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                     <div class="products__product product">
                         <div class="product__image-form">
@@ -2151,7 +2497,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="product__add">+ в корзину</button>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2219,7 +2567,7 @@
                         <div class="header__column header__center">
                             <p class="header__text">Бесплатная доставка</p>
                             <a href="tel:+74955071777" class="header__phone">+7 (495) 507-17-77</a>
-                            <a href="#" class="header__call-btn popup-callback-open-btn">Перезвоните мне</a>
+                            <button class="header__call-btn popup-callback-open-btn">Перезвоните мне</button>
                         </div>
                         <div class="header__column header__right">
                             <a href="#" class="header__link">О компании</a>
