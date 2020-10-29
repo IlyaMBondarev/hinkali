@@ -150,7 +150,7 @@ popupCallbackCloseBtn.addEventListener('click', (event) => {
 
 // validation
 
-const popupCallbackForm = popupCallback.getElementById('popupCallbackForm');
+const popupCallbackForm = document.getElementById('popupCallbackForm');
 popupCallbackForm.addEventListener('submit', formSend);
 
 async function formSend(e) {
@@ -169,29 +169,21 @@ function formValidate(form) {
 
     for (let index = 0; index < formReq.length; index++) {
         const input = formReq[index];
-        formRemoveError(input)
+        input.classList.remove('_error');
 
         if (input.classList.contains('_phone')) {
             if(input.value.length < 18) {
-                formAddError(input);
+                input.classList.add('_error');
                 error++;
             }
         } else {
-            if (input.value === '') {
-                formAddError(input);
+            if (input.value.length < 3 || input.value.length > 32) {
+                input.classList.add('_error');
                 error++;
             }
         }
     }
     return error;
-}
-
-function formAddError(input) {
-    input.classList.add('_error');
-}
-
-function formRemoveError(input) {
-    input.classList.remove('_error');
 }
 
 //маска телефона
