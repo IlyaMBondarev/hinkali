@@ -121,6 +121,100 @@ citySelects.forEach(block => {
         });
     })
 })
+
+let popupCallbackBackground = document.querySelector('.popup-callback-bg');
+let popupCallbackOpenBtns = document.querySelectorAll('.popup-callback-open-btn');
+let popupCallback = popupCallbackBackground.querySelector('.popup-callback');
+let popupCallbackCloseBtn = popupCallbackBackground.querySelector('.popup-callback__close');
+
+popupCallbackOpenBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        popupCallbackBackground.classList.add('popup-callback-bg-visible');
+        document.querySelector('body').style.overflow = 'hidden';
+    });
+})
+
+popupCallbackBackground.addEventListener('click', (event) => {
+    if (event.target === popupCallbackBackground) {
+        popupCallbackBackground.classList.remove('popup-callback-bg-visible');
+        document.querySelector('body').style.overflow = '';
+    }
+});
+
+popupCallbackCloseBtn.addEventListener('click', (event) => {
+    popupCallbackBackground.classList.remove('popup-callback-bg-visible');
+    document.querySelector('body').style.overflow = '';
+});
+
+
+
+// validation
+
+const popupCallbackForm = popupCallback.getElementById('popupCallbackForm');
+popupCallbackForm.addEventListener('submit', formSend);
+
+async function formSend(e) {
+    e.preventDefault();
+
+    let error = formValidate(popupCallbackForm);
+
+    if (error === 0) {
+
+    }
+}
+
+function formValidate(form) {
+    let error = 0;
+    let formReq = document.querySelectorAll('._req');
+
+    for (let index = 0; index < formReq.length; index++) {
+        const input = formReq[index];
+        formRemoveError(input)
+
+        if (input.classList.contains('_phone')) {
+            if(input.value.length < 18) {
+                formAddError(input);
+                error++;
+            }
+        } else {
+            if (input.value === '') {
+                formAddError(input);
+                error++;
+            }
+        }
+    }
+    return error;
+}
+
+function formAddError(input) {
+    input.classList.add('_error');
+}
+
+function formRemoveError(input) {
+    input.classList.remove('_error');
+}
+
+//маска телефона
+
+function mask(event) {
+    let matrix = "+7 (___) ___-__-__",
+        i = 0,
+        def = matrix.replace(/\D/g, ""),
+        val = this.value.replace(/\D/g, "");
+    if (def.length >= val.length) val = def;
+    this.value = matrix.replace(/./g, function(a) {
+        return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+    });
+    if (event.type === "blur") {
+        if (this.value.length === 2) this.value = ""
+    }
+}
+
+let phones = document.querySelectorAll("._phone");
+phones.forEach(phone => phone.addEventListener("input", mask, false));
+phones.forEach(phone => phone.addEventListener("focus", mask, false));
+phones.forEach(phone => phone.addEventListener("blur", mask, false));
+
 /*
 
 document.querySelectorAll('.product__add').forEach(button => {
