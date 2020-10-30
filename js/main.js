@@ -105,7 +105,7 @@ citySelects.forEach(block => {
     let dropBlock = block.querySelector('.city-select__drop');
     let closeBtn = dropBlock.querySelector('.city-select__close');
     let citySelected = dropBlock.querySelector('.city-select__city-selected');
-    let cities = dropBlock.querySelectorAll('.city-select__city')
+    let cities = dropBlock.querySelectorAll('.city-select__city');
     dropBtn.addEventListener('click', () => {
         dropBlock.classList.toggle('city-select__dropped');
         arrow.classList.toggle('city-select__arrow-up');
@@ -306,4 +306,23 @@ document.querySelectorAll('.wave').forEach(wave => {
     }
     //wave.parentElement.style.width = `${width}px`;
     wave.innerHTML = inner;
+})
+document.querySelectorAll('.underground').forEach(block => {
+    let button = block.querySelector('.underground-btn');
+    let current = button.querySelector('.basket__underground-current');
+    let arrow = button.querySelector('.fa-caret-down');
+    let drop = block.querySelector('.underground-drop');
+    let lists = drop.querySelectorAll('li');
+    button.addEventListener('click', () => {
+        drop.classList.toggle('underground-drop-opened');
+        arrow.classList.toggle('arrow-rotated');
+    });
+    lists.forEach(li => {
+        li.addEventListener('click', () => {
+            current.textContent = li.textContent;
+            drop.classList.remove('underground-drop-opened');
+            arrow.classList.remove('arrow-rotated');
+        });
+    })
+
 })
