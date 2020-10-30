@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/catalog.css">
+</head>
+<body>
+<div class="wrapper">
+    <main class="page">
+<header class="header">
+    <div class="container">
+        <div class="header__row">
+            <div class="header__logo">
+                <img src="img/logo_letter.png" alt="logo">
+            </div>
+            <div class="header__content">
+                <div class="header__column header__left">
+                    <div class="header__city-select city-select">
+                        <button class="city-select__drop-btn">
+                            <span class="city-select__current border-bottom">Москва</span>
+                            <i class="fa fa-chevron-down city-select__arrow"></i>
+                        </button>
+                        <div class="city-select__drop city-select__drop-header">
+                            <button class="city-select__close">+</button>
+                            <ul class="city-select__list">
+                                <li class="city-select__city city-select__city-selected">Москва</li>
+                                <li class="city-select__city">Санкт-Петербург</li>
+                                <li class="city-select__city">Новосибирск</li>
+                                <li class="city-select__city">Екатеринбург</li>
+                                <li class="city-select__city">Казань</li>
+                                <li class="city-select__city">Нижний Новгород</li>
+                                <li class="city-select__city">Челябинск</li>
+                            </ul>
+                            <ul class="city-select__list">
+                                <li class="city-select__city">Самара</li>
+                                <li class="city-select__city">Омск</li>
+                                <li class="city-select__city">Ростов-на-Дону</li>
+                                <li class="city-select__city">Уфа</li>
+                                <li class="city-select__city">Красноярск</li>
+                                <li class="city-select__city">Воронеж</li>
+                            </ul>
+                            <ul class="city-select__list">
+                                <li class="city-select__city">Пермь</li>
+                                <li class="city-select__city">Волгоград</li>
+                                <li class="city-select__city">Краснодар</li>
+                                <li class="city-select__city">Саратов</li>
+                                <li class="city-select__city">Тюмень</li>
+                                <li class="city-select__city">Тольятти</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="header__text"><span>Доставка</span> <span>с 10.00 до 22.00</span></p>
+                </div>
+                <div class="header__column header__center">
+                    <p class="header__text">Бесплатная доставка</p>
+                    <a href="tel:+74955071777" class="header__phone">+7 (495) 507-17-77</a>
+                    <button class="header__call-btn popup-callback-open-btn border-bottom">Перезвоните мне</button>
+                </div>
+                <div class="header__column header__right">
+                    <a href="#" class="header__link">О компании</a>
+                    <a href="#" class="header__link">Контакты</a>
+                    <a href="#" class="header__link">Франшиза</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="nav">
+    <div class="container">
+        <div class="nav__row">
+            <ul class="nav__menu">
+                <li><a href="#" class="nav__link">Хинкали</a></li>
+                <li><a href="#" class="nav__link">Хачапури</a></li>
+                <li><a href="#" class="nav__link">Шашлыки</a></li>
+                <li><a href="#" class="nav__link">Соусы</a></li>
+                <li><a href="#" class="nav__link">Закуски</a></li>
+                <li><a href="#" class="nav__link">Горячее</a></li>
+                <li><a href="#" class="nav__link">Супы</a></li>
+                <li><a href="#" class="nav__link">Салаты</a></li>
+                <li><a href="#" class="nav__link">Десерты</a></li>
+                <li><a href="#" class="nav__link">Напитки</a></li>
+            </ul>
+            <div class="nav__cart-block cart-block">
+                <button class="nav__cart-btn cart-btn">
+                    <img src="img/icons/food.png" alt="food">
+                    <span class="nav__count">10</span>
+                    <span class="nav__total">1620 <i class="fa fa-ruble-sign"></i></span>
+                </button>
+                <div class="cart">
+                    <div class="cart__items">
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__result">
+                        <div class="cart__content">Сумма заказа:</div>
+                        <div class="cart__total"><span>4050</span> <i class="fa fa-ruble-sign"></i></div>
+                    </div>
+                    <div class="cart__button">
+                        <button class="cart__submit" data-animation="ripple">офрмить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<nav id="topNav" class="nav">
+    <div class="container">
+        <div class="nav__row">
+            <ul class="nav__menu">
+                <li><a href="#" class="nav__link">Хинкали</a></li>
+                <li><a href="#" class="nav__link">Хачапури</a></li>
+                <li><a href="#" class="nav__link">Шашлыки</a></li>
+                <li><a href="#" class="nav__link">Соусы</a></li>
+                <li><a href="#" class="nav__link">Закуски</a></li>
+                <li><a href="#" class="nav__link">Горячее</a></li>
+                <li><a href="#" class="nav__link">Супы</a></li>
+                <li><a href="#" class="nav__link">Салаты</a></li>
+                <li><a href="#" class="nav__link">Десерты</a></li>
+                <li><a href="#" class="nav__link">Напитки</a></li>
+            </ul>
+            <div class="nav__phone"><a href="tel:+74955071777" class="nav__phone-link">+7 (495) 507-17-77</a></div>
+            <div class="nav__cart-block cart-block">
+                <button class="nav__cart-btn cart-btn">
+                    <img src="img/icons/food.png" alt="food">
+                    <span class="nav__count">10</span>
+                    <span class="nav__total">1620 <i class="fa fa-ruble-sign"></i></span>
+                </button>
+                <div class="cart">
+                    <div class="cart__items">
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="#" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__result">
+                        <div class="cart__content">Сумма заказа:</div>
+                        <div class="cart__total"><span>4050</span> <i class="fa fa-ruble-sign"></i></div>
+                    </div>
+                    <div class="cart__button">
+                        <button class="cart__submit" data-animation="ripple">офрмить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="popup-callback-bg">
+    <div class="popup-callback">
+        <button class="popup-callback__close">+</button>
+        <form action="#" class="popup-callback__form" id="popupCallbackForm">
+            <div class="popup-callback__block">
+                <label for="popupCallbackName">Ваше имя:</label>
+                <input id="popupCallbackName" type="text" placeholder="Анастасия" class="_req">
+                <span>Имя должно быть от 3 до 32 символов!</span>
+            </div>
+            <div class="popup-callback__block">
+                <label for="popupCallbackPhone">Телефон:</label>
+                <input id="popupCallbackPhone" type="tel" placeholder="+7 (926) 000-00-00" class="_req _phone masked">
+                <span>Номер введен неверно!</span>
+            </div>
+            <p class="popup-callback__content">Наш оператор свяжется с Вами для уточнения деталей заказа.</p>
+            <button class="popup-callback__button" type="submit">оставить заявку</button>
+        </form>
+    </div>
+</div>        <div class="content">
+            <div class="breadcrumbs container">
+                <div class="breadcrumbs__block">
+                    <a href="#" class="breadcrumbs__link wave">главная</a>
+                </div>
+                <div class="breadcrumbs__block">
+                    <a href="#" class="breadcrumbs__link wave">хинкали</a>
+                </div>
+            </div>
+            <div class="products container">
+                <div class="products__title">
+                    <span class="products__name">Доставка хинкали по Москве и МО</span>
+                </div>
+                <div class="products__block">
+                    <div class="products__item"><div class="products__product product product__on-sale">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
+                        </div>
+                        <div class="product__name">Хинкали со свининой и говядиной</div>
+                        <div class="product__line"></div>
+                        <div class="product__block">
+                            <div class="product__counts">
+                                <button class="product__count-less">-</button>
+                                <span class="product__count">1</span>
+                                <button class="product__count-more">+</button>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-main">
+                                    <p class="product__weight"><span>350</span> г</p>
+                                    <p class="product__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                                <div class="product__sale">
+                                    <p><span>1500</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="products__item"><div class="products__product product product__recommend">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <!-- <img src="img/product.jpg" alt="" class="product__image"> -->
+                            </div>
+                        </div>
+                        <div class="product__name">Хинкали со свининой и говядиной жареные</div>
+                        <div class="product__line"></div>
+                        <div class="product__block">
+                            <div class="product__counts">
+                                <button class="product__count-less">-</button>
+                                <span class="product__count">1</span>
+                                <button class="product__count-more">+</button>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-main">
+                                    <p class="product__weight"><span>350</span> г</p>
+                                    <p class="product__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                                <div class="product__sale">
+                                    <p><span>1500</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="products__item"><div class="products__product product product__hit">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
+                        </div>
+                        <div class="product__name">Хинкали с картошкой и морковью</div>
+                        <div class="product__line"></div>
+                        <div class="product__block">
+                            <div class="product__counts">
+                                <button class="product__count-less">-</button>
+                                <span class="product__count">1</span>
+                                <button class="product__count-more">+</button>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-main">
+                                    <p class="product__weight"><span>350</span> г</p>
+                                    <p class="product__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                                <div class="product__sale">
+                                    <p><span>1500</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="products__item"><div class="products__product product">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
+                        </div>
+                        <div class="product__name">Хинкали с индейкой</div>
+                        <div class="product__line"></div>
+                        <div class="product__block">
+                            <div class="product__counts">
+                                <button class="product__count-less">-</button>
+                                <span class="product__count">1</span>
+                                <button class="product__count-more">+</button>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-main">
+                                    <p class="product__weight"><span>350</span> г</p>
+                                    <p class="product__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                                <div class="product__sale">
+                                    <p><span>1500</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="products__item"><div class="products__product product">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
+                        </div>
+                        <div class="product__name">Хинкали из баранины</div>
+                        <div class="product__line"></div>
+                        <div class="product__block">
+                            <div class="product__counts">
+                                <button class="product__count-less">-</button>
+                                <span class="product__count">1</span>
+                                <button class="product__count-more">+</button>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-main">
+                                    <p class="product__weight"><span>350</span> г</p>
+                                    <p class="product__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                                <div class="product__sale">
+                                    <p><span>1500</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="products__item"><div class="products__product product">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
+                        </div>
+                        <div class="product__name">Хинкали с бараниной жареные</div>
+                        <div class="product__line"></div>
+                        <div class="product__block">
+                            <div class="product__counts">
+                                <button class="product__count-less">-</button>
+                                <span class="product__count">1</span>
+                                <button class="product__count-more">+</button>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-main">
+                                    <p class="product__weight"><span>350</span> г</p>
+                                    <p class="product__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                                <div class="product__sale">
+                                    <p><span>1500</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="products__item"><div class="products__product product">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
+                        </div>
+                        <div class="product__name">Хинкали с семгой</div>
+                        <div class="product__line"></div>
+                        <div class="product__block">
+                            <div class="product__counts">
+                                <button class="product__count-less">-</button>
+                                <span class="product__count">1</span>
+                                <button class="product__count-more">+</button>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-main">
+                                    <p class="product__weight"><span>350</span> г</p>
+                                    <p class="product__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                                <div class="product__sale">
+                                    <p><span>1500</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="products__item"><div class="products__product product">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
+                        </div>
+                        <div class="product__name">Хинкали с грибами</div>
+                        <div class="product__line"></div>
+                        <div class="product__block">
+                            <div class="product__counts">
+                                <button class="product__count-less">-</button>
+                                <span class="product__count">1</span>
+                                <button class="product__count-more">+</button>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-main">
+                                    <p class="product__weight"><span>350</span> г</p>
+                                    <p class="product__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                                <div class="product__sale">
+                                    <p><span>1500</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="products__item"><div class="products__product product">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
+                        </div>
+                        <div class="product__name">Хинкали замороженные</div>
+                        <div class="product__line"></div>
+                        <div class="product__block">
+                            <div class="product__counts">
+                                <button class="product__count-less">-</button>
+                                <span class="product__count">1</span>
+                                <button class="product__count-more">+</button>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-main">
+                                    <p class="product__weight"><span>350</span> г</p>
+                                    <p class="product__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                                <div class="product__sale">
+                                    <p><span>1500</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="products__item"><div class="products__product product">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
+                        </div>
+                        <div class="product__name">Квари с сыром</div>
+                        <div class="product__line"></div>
+                        <div class="product__block">
+                            <div class="product__counts">
+                                <button class="product__count-less">-</button>
+                                <span class="product__count">1</span>
+                                <button class="product__count-more">+</button>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-main">
+                                    <p class="product__weight"><span>350</span> г</p>
+                                    <p class="product__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                                <div class="product__sale">
+                                    <p><span>1500</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="products__item"><div class="products__product product">
+                        <div class="product__image-form">
+                            <div class="product__image-bg">
+                                <div class="product__mask">
+                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
+                                </div>
+                                <img src="img/product.jpg" alt="" class="product__image">
+                            </div>
+                        </div>
+                        <div class="product__name">Квари с сыром жареные</div>
+                        <div class="product__line"></div>
+                        <div class="product__block">
+                            <div class="product__counts">
+                                <button class="product__count-less">-</button>
+                                <span class="product__count">1</span>
+                                <button class="product__count-more">+</button>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-main">
+                                    <p class="product__weight"><span>350</span> г</p>
+                                    <p class="product__price"><span>1350</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                                <div class="product__sale">
+                                    <p><span>1500</span> <i class="fa fa-ruble-sign"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seo">
+                <div class="container">
+                    <div class="seo__column">
+                        <h3>Заголовок текста</h3>
+                        <p>Задача организации, в&nbsp;особенности&nbsp;же начало повседневной работы по&nbsp;формированию позиции требуют от&nbsp;нас анализа модели развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров, соответствует насущным потребностям. Равным образом реализация намеченных плановых заданий играет важную роль в&nbsp;формировании направлений прогрессивного развития.</p>
+                        <h3>Какой-то длинный заголовок текста</h3>
+                        <p>Повседневная практика показывает, что сложившаяся структура организации влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации системы обучения кадров, соответствует насущным потребностям. Разнообразный и&nbsp;богатый опыт консультация с&nbsp;широким активом играет важную роль в&nbsp;формировании существенных финансовых и&nbsp;административных условий.</p>
+                    </div>
+                    <div class="seo__column">
+                        <h3>Очень длинный заголовок текста, очень длинный заголовок текста, </h3>
+                        <p>Задача организации, в&nbsp;особенности&nbsp;же начало повседневной работы по&nbsp;формированию позиции требуют от&nbsp;нас анализа модели развития. Товарищи! постоянное информационно пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров.</p>
+                        <h3>Еще один длинный заголовок текста</h3>
+                        <p>Не&nbsp;следует, однако забывать, что консультация с&nbsp;широким активом представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по&nbsp;разработке форм развития. Не&nbsp;следует, однако забывать, что укрепление и&nbsp;развитие структуры требуют определения.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="header">
+    <div class="container">
+        <div class="header__row">
+            <div class="header__logo">
+                <img src="img/logo_letter.png" alt="logo">
+            </div>
+            <div class="header__content">
+                <div class="header__column header__left">
+                    <div class="header__city-select city-select">
+                        <button class="city-select__drop-btn">
+                            <span class="city-select__current">Москва</span>
+                            <i class="fa fa-chevron-down city-select__arrow"></i>
+                        </button>
+                        <div class="city-select__drop city-select__drop-footer">
+                            <button class="city-select__close">+</button>
+                            <ul class="city-select__list">
+                                <li class="city-select__city city-select__city-selected">Москва</li>
+                                <li class="city-select__city">Санкт-Петербург</li>
+                                <li class="city-select__city">Новосибирск</li>
+                                <li class="city-select__city">Екатеринбург</li>
+                                <li class="city-select__city">Казань</li>
+                                <li class="city-select__city">Нижний Новгород</li>
+                                <li class="city-select__city">Челябинск</li>
+                            </ul>
+                            <ul class="city-select__list">
+                                <li class="city-select__city">Самара</li>
+                                <li class="city-select__city">Омск</li>
+                                <li class="city-select__city">Ростов-на-Дону</li>
+                                <li class="city-select__city">Уфа</li>
+                                <li class="city-select__city">Красноярск</li>
+                                <li class="city-select__city">Воронеж</li>
+                            </ul>
+                            <ul class="city-select__list">
+                                <li class="city-select__city">Пермь</li>
+                                <li class="city-select__city">Волгоград</li>
+                                <li class="city-select__city">Краснодар</li>
+                                <li class="city-select__city">Саратов</li>
+                                <li class="city-select__city">Тюмень</li>
+                                <li class="city-select__city">Тольятти</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="header__text"><span>Доставка</span> <span>с 10.00 до 22.00</span></p>
+                </div>
+                <div class="header__column header__center">
+                    <p class="header__text">Бесплатная доставка</p>
+                    <a href="tel:+74955071777" class="header__phone">+7 (495) 507-17-77</a>
+                    <button class="header__call-btn popup-callback-open-btn border-bottom">Перезвоните мне</button>
+                </div>
+                <div class="header__column header__right">
+                    <a href="#" class="header__link">О компании</a>
+                    <a href="#" class="header__link">Контакты</a>
+                    <a href="#" class="header__link">Франшиза</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__row">
+            <div class="footer__column"><span>Все права защищены &copy; 2019 -2020</span></div>
+            <div class="footer__column"><a href="#"><span>Политика конфиденциальности</span></a></div>
+            <div class="footer__column"><a href="#"><span>Создание сайтов Веб-студия “Тесла”</span></a></div>
+        </div>
+    </div>
+</footer>    </main>
+</div>
+<script src="js/main.js"></script></body>
+</html>

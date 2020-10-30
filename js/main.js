@@ -297,3 +297,13 @@ for (let i = 0; i < button.length; i++) {
         },700);
     })
 }
+document.querySelectorAll('.wave').forEach(wave => {
+    let span = wave.textContent;
+    let width = wave.offsetWidth;
+    let inner = '';
+    for (let indexOfLetter = 0; indexOfLetter < span.length; indexOfLetter++) {
+        inner += `<span style="transition: font-size 0s linear ${indexOfLetter * 0.04}s">` + span[indexOfLetter] + '</span>';
+    }
+    //wave.parentElement.style.width = `${width}px`;
+    wave.innerHTML = inner;
+})
