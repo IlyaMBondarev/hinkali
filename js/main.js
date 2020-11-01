@@ -78,7 +78,7 @@ document.querySelectorAll('.slider').forEach(slider => {
         })
     }
 
-    setInterval(() => {
+    /*setInterval(() => {
             buttons[indexOfActiveButton - 1].classList.remove('slider__button-active');
             if (indexOfActiveButton < buttons.length) {
                 indexOfActiveButton++;
@@ -94,7 +94,7 @@ document.querySelectorAll('.slider').forEach(slider => {
                     slides.style.marginLeft = `-${indexOfActiveButton * 100}%`;
                 }, 0.001)
             }
-    }, 10000)
+    }, 10000)*/
 })
 let citySelects = document.querySelectorAll('.city-select');
 
