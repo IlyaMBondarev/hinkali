@@ -717,6 +717,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f44601;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .item {
@@ -966,6 +967,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .product__name {
+  display: block;
   margin: 29px 13px 18px;
   min-height: 44px;
   max-width: 243px;
@@ -976,6 +978,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.55px;
   white-space: normal;
   text-align: center;
+}
+.product__name:hover {
+  color: #f54500;
 }
 .product__line {
   height: 1px;
