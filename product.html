@@ -4,8 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог</title>
-    <link rel="stylesheet" href="css/catalog.css">
+    <title>Название товара</title>
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
@@ -388,13 +392,100 @@
                 <div class="breadcrumbs__block">
                     <a href="#" class="breadcrumbs__link wave">хинкали</a>
                 </div>
-            </div>
-            <div class="products container">
-                <div class="products__title">
-                    <span class="products__name">Доставка хинкали по Москве и МО</span>
+                <div class="breadcrumbs__block">
+                    <a href="#" class="breadcrumbs__link wave">название блюда</a>
                 </div>
-                <div class="products__block">
-                    <div class="products__item"><div class="products__product product product__on-sale">
+            </div>
+            <div class="dish container dish__on-sale">
+                <div class="dish__left">
+                    <div class="dish__image-form">
+                        <div class="dish__image-bg">
+                            <img src="img/product.jpg" alt="" class="dish__image">
+                        </div>
+                    </div>
+                </div>
+                <div class="dish__right">
+                    <h4 class="dish__name">Хинкали со свининой и говядиной</h4>
+                    <ul class="dish__ingredients">
+                        <li>свинина</li>
+                        <li>говядина</li>
+                        <li>лук</li>
+                        <li>черный перец</li>
+                        <li>зеленый перец</li>
+                        <li>кинза</li>
+                        <li>чеснок</li>
+                    </ul>
+                    <div class="dish__description">
+                        <p class="dish__description-title">Пищевая ценность на 100 г</p>
+                        <div class="dish__table">
+                            <div class="dish__table-left">
+                                <span>Энерг. ценность</span>
+                                <span>Белки</span>
+                                <span>Жиры</span>
+                                <span>Углеводы</span>
+                                <span>Энерг. ценность</span>
+                                <span>Белки</span>
+                                <span>Жиры</span>
+                                <span>Углеводы</span>
+                            </div>
+                            <div class="dish__table-right">
+                                <span>260 ккал</span>
+                                <span>11.9 г</span>
+                                <span>11.9 г</span>
+                                <span>26.4 г</span>
+                                <span>260 ккал</span>
+                                <span>11.9 г</span>
+                                <span>11.9 г</span>
+                                <span>26.4 г</span>
+                            </div>
+                        </div>
+                        <button class="dish__description-full border-bottom">Полное описание</button>
+                    </div>
+                    <div class="dish__block">
+                        <div class="dish__info">
+                            <div class="dish__info-main">
+                                <p class="dish__weight"><span>350</span> г</p>
+                                <p class="dish__price"><span>1350</span> <span class="bold">₽</span></p>
+                            </div>
+                            <div class="dish__sale">
+                                <p><span>1500</span> <span class="bold">₽</span></p>
+                            </div>
+                        </div>
+                        <div class="dish__counts">
+                            <button class="dish__count-less">-</button>
+                            <span class="dish__count">1</span>
+                            <button class="dish__count-more">+</button>
+                        </div>
+                    </div>
+                    <div class="dish__add">
+                        <button class="dish__submit" data-animation="ripple">+ в корзину</button>
+                    </div>
+                    <div class="dish__checkboxes">
+                        <div class="dish__checkbox">
+                            <input id="check1" type="checkbox" name="check1" class="green__check" checked>
+                            <label for="check1" class="green__check-label">Хинкали со свининой и говядиной заказать в Москве и МО.</label>
+                        </div>
+                        <div class="dish__checkbox">
+                            <input id="check2" type="checkbox" name="check2" class="green__check" checked>
+                            <label for="check2" class="green__check-label">Хинкали со свининой и говядиной с доставкой на дом в Москве и МО.</label>
+                        </div>
+                        <div class="dish__checkbox">
+                            <input id="check3" type="checkbox" name="check3" class="green__check" checked>
+                            <label for="check3" class="green__check-label">Хинкали со свининой и говядиной в Москве и МО из Хинкальной №1</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slider container">
+                <div class="carousel-slider__top">
+                    <p class="carousel-slider__title">Добавьте к заказу</p>
+                    <div class="carousel-slider__arrows owl-nav">
+                        <button class="carousel-slider__arrow carousel-slider__arrow-left" type="button" role="presentation" class="owl-prev disabled"><img src="img/icons/arrow-left.png" alt="left"></button>
+                        <button class="carousel-slider__arrow carousel-slider__arrow-right" type="button" role="presentation" class="owl-next"><img src="img/icons/arrow-right.png" alt="right"></button>
+                    </div>
+                </div>
+                <div class="carousel-slider__slides owl-carousel">
+                    <div class="products__item"><div class="products__product product">
                         <div class="product__image-form">
                             <div class="product__image-bg">
                                 <div class="product__mask">
@@ -426,13 +517,13 @@
                         </div>
                     </div>
                     </div>
-                    <div class="products__item"><div class="products__product product product__recommend">
+                    <div class="products__item"><div class="products__product product">
                         <div class="product__image-form">
                             <div class="product__image-bg">
                                 <div class="product__mask">
                                     <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
                                 </div>
-                                <!-- <img src="img/product.jpg" alt="" class="product__image"> -->
+                                <img src="img/product.jpg" alt="" class="product__image">
                             </div>
                         </div>
                         <div class="product__name">Хинкали со свининой и говядиной жареные</div>
@@ -458,7 +549,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="products__item"><div class="products__product product product__hit">
+                    <div class="products__item"><div class="products__product product">
                         <div class="product__image-form">
                             <div class="product__image-bg">
                                 <div class="product__mask">
@@ -531,7 +622,7 @@
                                 <img src="img/product.jpg" alt="" class="product__image">
                             </div>
                         </div>
-                        <div class="product__name">Хинкали из баранины</div>
+                        <div class="product__name">Хинкали со свининой и говядиной</div>
                         <div class="product__line"></div>
                         <div class="product__block">
                             <div class="product__counts">
@@ -563,7 +654,7 @@
                                 <img src="img/product.jpg" alt="" class="product__image">
                             </div>
                         </div>
-                        <div class="product__name">Хинкали с бараниной жареные</div>
+                        <div class="product__name">Хинкали со свининой и говядиной жареные</div>
                         <div class="product__line"></div>
                         <div class="product__block">
                             <div class="product__counts">
@@ -595,7 +686,7 @@
                                 <img src="img/product.jpg" alt="" class="product__image">
                             </div>
                         </div>
-                        <div class="product__name">Хинкали с семгой</div>
+                        <div class="product__name">Хинкали с картошкой и морковью</div>
                         <div class="product__line"></div>
                         <div class="product__block">
                             <div class="product__counts">
@@ -627,103 +718,7 @@
                                 <img src="img/product.jpg" alt="" class="product__image">
                             </div>
                         </div>
-                        <div class="product__name">Хинкали с грибами</div>
-                        <div class="product__line"></div>
-                        <div class="product__block">
-                            <div class="product__counts">
-                                <button class="product__count-less">-</button>
-                                <span class="product__count">1</span>
-                                <button class="product__count-more">+</button>
-                            </div>
-                            <div class="product__info">
-                                <div class="product__info-main">
-                                    <p class="product__weight"><span>350</span> г</p>
-                                    <p class="product__price"><span>1350</span> <span class="bold">₽</span></p>
-                                </div>
-                                <div class="product__sale">
-                                    <p><span>1500</span> <span class="bold">₽</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__add">
-                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="products__item"><div class="products__product product">
-                        <div class="product__image-form">
-                            <div class="product__image-bg">
-                                <div class="product__mask">
-                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
-                                </div>
-                                <img src="img/product.jpg" alt="" class="product__image">
-                            </div>
-                        </div>
-                        <div class="product__name">Хинкали замороженные</div>
-                        <div class="product__line"></div>
-                        <div class="product__block">
-                            <div class="product__counts">
-                                <button class="product__count-less">-</button>
-                                <span class="product__count">1</span>
-                                <button class="product__count-more">+</button>
-                            </div>
-                            <div class="product__info">
-                                <div class="product__info-main">
-                                    <p class="product__weight"><span>350</span> г</p>
-                                    <p class="product__price"><span>1350</span> <span class="bold">₽</span></p>
-                                </div>
-                                <div class="product__sale">
-                                    <p><span>1500</span> <span class="bold">₽</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__add">
-                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="products__item"><div class="products__product product">
-                        <div class="product__image-form">
-                            <div class="product__image-bg">
-                                <div class="product__mask">
-                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
-                                </div>
-                                <img src="img/product.jpg" alt="" class="product__image">
-                            </div>
-                        </div>
-                        <div class="product__name">Квари с сыром</div>
-                        <div class="product__line"></div>
-                        <div class="product__block">
-                            <div class="product__counts">
-                                <button class="product__count-less">-</button>
-                                <span class="product__count">1</span>
-                                <button class="product__count-more">+</button>
-                            </div>
-                            <div class="product__info">
-                                <div class="product__info-main">
-                                    <p class="product__weight"><span>350</span> г</p>
-                                    <p class="product__price"><span>1350</span> <span class="bold">₽</span></p>
-                                </div>
-                                <div class="product__sale">
-                                    <p><span>1500</span> <span class="bold">₽</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__add">
-                            <button class="product__submit" data-animation="ripple">+ в корзину</button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="products__item"><div class="products__product product">
-                        <div class="product__image-form">
-                            <div class="product__image-bg">
-                                <div class="product__mask">
-                                    <p class="product__description">вареные хинкали, сочная свинина, сочная говядина, лук, черный, зеленый перец, кинза, чеснок</p>
-                                </div>
-                                <img src="img/product.jpg" alt="" class="product__image">
-                            </div>
-                        </div>
-                        <div class="product__name">Квари с сыром жареные</div>
+                        <div class="product__name">Хинкали с индейкой</div>
                         <div class="product__line"></div>
                         <div class="product__block">
                             <div class="product__counts">
@@ -748,22 +743,7 @@
                     </div>
                 </div>
             </div>
-            <div class="seo">
-                <div class="container">
-                    <div class="seo__column">
-                        <h3>Заголовок текста</h3>
-                        <p>Задача организации, в&nbsp;особенности&nbsp;же начало повседневной работы по&nbsp;формированию позиции требуют от&nbsp;нас анализа модели развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров, соответствует насущным потребностям. Равным образом реализация намеченных плановых заданий играет важную роль в&nbsp;формировании направлений прогрессивного развития.</p>
-                        <h3>Какой-то длинный заголовок текста</h3>
-                        <p>Повседневная практика показывает, что сложившаяся структура организации влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации системы обучения кадров, соответствует насущным потребностям. Разнообразный и&nbsp;богатый опыт консультация с&nbsp;широким активом играет важную роль в&nbsp;формировании существенных финансовых и&nbsp;административных условий.</p>
-                    </div>
-                    <div class="seo__column">
-                        <h3>Очень длинный заголовок текста, очень длинный заголовок текста, </h3>
-                        <p>Задача организации, в&nbsp;особенности&nbsp;же начало повседневной работы по&nbsp;формированию позиции требуют от&nbsp;нас анализа модели развития. Товарищи! постоянное информационно пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров.</p>
-                        <h3>Еще один длинный заголовок текста</h3>
-                        <p>Не&nbsp;следует, однако забывать, что консультация с&nbsp;широким активом представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по&nbsp;разработке форм развития. Не&nbsp;следует, однако забывать, что укрепление и&nbsp;развитие структуры требуют определения.</p>
-                    </div>
-                </div>
-            </div>
+
         </div>
 <div class="header footer__header">
     <div class="container">
@@ -833,5 +813,7 @@
     </div>
 </footer>    </main>
 </div>
-<script src="js/main.js"></script></body>
+<script src="js/main.js"></script><script src="js/owlcarousel.js"></script>
+<script src="js/fullDescOfProduct.js"></script>
+</body>
 </html>
