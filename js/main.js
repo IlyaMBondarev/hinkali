@@ -1,6 +1,8 @@
 
 document.querySelector('.wrapper').classList.add('loaded');
 
+myScroll();
+
 window.onscroll = function() {
     myScroll()
     closeCarts();
@@ -51,7 +53,7 @@ function _scroll(block, b, c){
 }
 
 function myScroll() {
-    _scroll('topNav', 'slideDown', '-350px');
+    _scroll('topNav', 'slideDown', '-100%');
 
 }
 
@@ -223,21 +225,6 @@ carts.forEach(cart => {
     let cartBlock = cart.querySelector('.cart');
     button.addEventListener('click', () => cartBlock.classList.toggle('cart-opened'));
 })
-/*
-
-document.querySelectorAll('.product__add').forEach(button => {
-    button.addEventListener('mouseover', (event) => {
-        button.innerHTML += "<span class='ripple-effect'>";
-        let effect = button.querySelectorAll('span:last-child')[0];
-        effect.style.left = `${event.pageX - button.pageX}px`;
-        effect.style.top = `${event.pageY - button.pageY}px`;
-        effect.style.transform = 'scale(100)';
-        effect.style.opacity = '0';
-    })
-})
-
-*/
-
 
 const isMobile = window.navigator.userAgent.match(/Mobile/) && window.navigator.userAgent.match(/Mobile/)[0] === "Mobile";
 const event = isMobile ? "touchstart" : "mouseover";
@@ -297,6 +284,65 @@ for (let i = 0; i < button.length; i++) {
         },700);
     })
 }
+
+let nav = document.querySelector('#nav');
+let topNav = document.querySelector('#topNav');
+let body = document.querySelector('body');
+
+document.querySelectorAll('.addToCart').forEach(button => {
+    button.addEventListener('click', (event) => {
+        let xBegin = event.pageX;
+        let yBegin = event.pageY;
+        let cartBlock, cartBtn;
+        if (topNav.style.top === '0' || topNav.style.top === '0px' || topNav.style.top === '') {
+            cartBlock = topNav.querySelector('.cart-block');
+            cartBtn = cartBlock.querySelector('.cart-btn');
+        } else {
+            cartBlock = nav.querySelector('.cart-block');
+            cartBtn = cartBlock.querySelector('.cart-btn');
+        }
+        let cartBlockCoordinates = cartBlock.getBoundingClientRect();
+        let xTo = cartBlockCoordinates.left + pageXOffset + (cartBtn.offsetWidth / 2);
+        let yTo = cartBlockCoordinates.top + pageYOffset + (cartBtn.offsetHeight / 2);
+
+        let baseCss = `position: absolute;
+                                    width: 40px;
+                                    height: 40px;
+                                    background: url(img/icons/icon_HIT.png);
+                                    background-size: cover;
+                                    z-index: 999;
+                                    transform: scale(0) translate(-50%,-50%);
+                                    left: ${xBegin}px;
+                                    top: ${yBegin}px;
+                                    opacity: 1;`;
+
+        let lateCss = `position: absolute;
+                                    width: 40px;
+                                    height: 40px;
+                                    background: url(img/icons/icon_HIT.png);
+                                    background-size: cover;
+                                    z-index: 999;
+                                    transition: transform 0.3s linear 0s, top 0.7s linear 0.3s, left  0.7s linear 0.3s, opacity 0.3s linear 1s;
+                                    transform: scale(1) translate(-50%,-50%);
+                                    left: ${xTo}px;
+                                    top: ${yTo}px;
+                                    opacity: 0;`
+
+        let iconToCart = document.createElement('span');
+        iconToCart.style.cssText = baseCss;
+
+        body.appendChild(iconToCart);
+
+        setTimeout( function() {
+            iconToCart.style.cssText = lateCss;
+        }, 5);
+
+        setTimeout ( function() {
+            iconToCart.remove();
+        }, 1300);
+
+    })
+})
 document.querySelectorAll('.wave').forEach(wave => {
     let span = wave.textContent;
     let width = wave.offsetWidth;
@@ -304,7 +350,6 @@ document.querySelectorAll('.wave').forEach(wave => {
     for (let indexOfLetter = 0; indexOfLetter < span.length; indexOfLetter++) {
         inner += `<span style="transition: font-size 0s linear ${indexOfLetter * 0.04}s">` + span[indexOfLetter] + '</span>';
     }
-    //wave.parentElement.style.width = `${width}px`;
     wave.innerHTML = inner;
 })
 document.querySelectorAll('.select').forEach(block => {

@@ -69,7 +69,7 @@
         </div>
     </div>
 </header>
-<nav class="nav">
+<nav id="nav" class="nav">
     <div class="container">
         <div class="nav__row">
             <ul class="nav__menu">
@@ -376,7 +376,7 @@
                 <input id="popupCallbackPhone" type="tel" placeholder="+7 (926) 000-00-00" class="_req _phone masked">
                 <span>Номер введен неверно!</span>
             </div>
-            <p class="popup-callback__content">Наш оператор свяжется с Вами для уточнения деталей заказа.</p>
+            <!-- <p class="popup-callback__content">Наш оператор свяжется с Вами для уточнения деталей заказа.</p> -->
             <button class="popup-callback__button" type="submit">оставить заявку</button>
         </form>
     </div>
@@ -498,7 +498,7 @@
                                    checked>
                             <label for="timeChoose" class="block__switch block__switch-right"><span>Выбрать время</span></label>
                         </div>
-                        <div class="ordering__block block">
+                        <div id="blockToHide" class="ordering__block block">
                             <div class="block__item block__fourth block__item-vertical">
                                 <label for="date">Дата</label>
                                 <input id="date" name="date" type="date" placeholder="2020-10-15">
@@ -570,7 +570,7 @@
                         <div class="block__radio-block">
                             <input id="byMoney" class="block__radio-circle" type="radio" name="wayToPay" checked>
                             <label for="byMoney" class="block__radio block__radio-first"><span>Наличными курьеру</span></label>
-                            <div class="block__item block__third">
+                            <div class="block__item block__third block__to-open">
                                 <label for="money">Сдача с</label>
                                 <input id="money" name="money" type="number" placeholder="2000">
                             </div>
@@ -675,5 +675,6 @@
     </div>
 </footer>    </main>
 </div>
-<script src="js/main.js"></script></body>
+<script src="js/main.js"></script><script src="js/ordering.js"></script>
+</body>
 </html>

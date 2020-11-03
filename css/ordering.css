@@ -1190,13 +1190,12 @@ label {
   background-color: #f4f2f3;
 }
 .block__radio {
-  display: inline-block;
+  display: block;
   padding-left: 105px;
   color: #222121;
   font-size: 16px;
   letter-spacing: 0.49px;
   position: relative;
-  margin-top: 37px;
   margin-bottom: 27px;
   cursor: pointer;
 }
@@ -1232,4 +1231,9 @@ label {
 }
 .block__radio-circle:checked + label:after {
   transform: translateY(-50%) scale(1);
+}
+
+#byMoney:checked ~ .block__to-open {
+  display: flex;
+  margin-bottom: 37px;
 }

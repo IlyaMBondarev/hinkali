@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "meiryo";
   src: url(../fonts/meiryo.ttc);
@@ -1064,21 +1065,47 @@ h1, h2, h3, h4, h5, h6 {
 .product__hit {
   position: relative;
 }
-.product__on-sale::before,
-.product__recommend::before,
-.product__hit::before {
-  content: "";
+.product__on-sale .product__action,
+.product__recommend .product__action,
+.product__hit .product__action {
   position: absolute;
+  white-space: nowrap;
   top: -13px;
   left: -13px;
   height: 55px;
   width: 55px;
   border-radius: 50%;
+  display: block;
   z-index: 50;
 }
+.product__on-sale .product__action:before,
+.product__recommend .product__action:before,
+.product__hit .product__action:before {
+  position: absolute;
+  display: block;
+  bottom: 100%;
+  background-color: #ffffff;
+  box-shadow: 7px 9px 21px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 6px;
+  z-index: 55;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s linear 0.2s, visibility 0s linear 0.2s;
+}
+.product__on-sale .product__action:hover:before,
+.product__recommend .product__action:hover:before,
+.product__hit .product__action:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
 
-.product__on-sale::before {
+.product__on-sale .product__action {
   background: url("../img/icons/icon_STOCK.png") center;
+  background-size: cover;
+}
+.product__on-sale .product__action:before {
+  content: "Акция";
 }
 .product__on-sale .product__sale {
   display: block;
@@ -1087,12 +1114,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 114px;
 }
 
-.product__recommend::before {
+.product__recommend .product__action {
   background: url("../img/icons/icon_RECOMMEND.png") center;
+  background-size: cover;
+}
+.product__recommend .product__action:before {
+  content: "Рекомендуем";
 }
 
-.product__hit::before {
+.product__hit .product__action {
   background: url("../img/icons/icon_HIT.png") center;
+  background-size: cover;
+}
+.product__hit .product__action:before {
+  content: "Хит продаж";
 }
 
 .seo {
