@@ -154,6 +154,11 @@ input[type=number]::-webkit-inner-spin-button {
   transform: scale(1);
 }
 
+label {
+  -webkit-user-select: none;
+          user-select: none;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -833,6 +838,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer__header {
   border-top: 1px solid #d9d9d9;
+}
+.footer-without-border-top > .footer__header {
+  border-top: none;
 }
 
 .products__title {

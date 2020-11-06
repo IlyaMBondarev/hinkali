@@ -100,38 +100,75 @@ document.querySelectorAll('.slider').forEach(slider => {
 })
 let citySelects = document.querySelectorAll('.city-select');
 
-citySelects.forEach(block => {
-    let dropBtn = block.querySelector('.city-select__drop-btn');
-    let current = dropBtn.querySelector('.city-select__current');
-    let arrow = dropBtn.querySelector('.city-select__arrow');
-    let dropBlock = block.querySelector('.city-select__drop');
-    let closeBtn = dropBlock.querySelector('.city-select__close');
-    let citySelected = dropBlock.querySelector('.city-select__city-selected');
-    let cities = dropBlock.querySelectorAll('.city-select__city');
-    dropBtn.addEventListener('click', () => {
-        dropBlock.classList.toggle('city-select__dropped');
-        arrow.classList.toggle('city-select__arrow-up');
+let citySelectArray = [];
+
+function chooseCity(indexOfSelect, city) {
+    citySelectArray[indexOfSelect].current.textContent = city.textContent;
+    citySelectArray[indexOfSelect].dropBlock.classList.remove('city-select__dropped');
+    citySelectArray[indexOfSelect].arrow.classList.remove('city-select__arrow-up');
+    citySelectArray[indexOfSelect].citySelected = city;
+    citySelectArray[indexOfSelect].citySelected.classList.add('city-select__city-selected');
+    if (document.querySelector('.contacts')) {
+        cityName = citySelectArray[indexOfSelect].citySelected.dataset.city;
+        cityContacts.textContent = citySelectArray[indexOfSelect].citySelected.textContent;
+        phone.textContent = contacts[cityName].phone;
+        delivery.textContent = contacts[cityName].delivery;
+        time.textContent = contacts[cityName].time;
+        mail.textContent = contacts[cityName].mail;
+        card.textContent = contacts[cityName].card;
+    }
+    for (let j = 0; j < citySelectArray.length; j++) {
+        if (j !== indexOfSelect) {
+            citySelectArray[j].current.textContent = city.textContent;
+            citySelectArray[j].dropBlock.classList.remove('city-select__dropped');
+            citySelectArray[j].arrow.classList.remove('city-select__arrow-up');
+            citySelectArray[j].citySelected.classList.remove('city-select__city-selected');
+            for (let k = 0; citySelectArray[j].cities.length; k++) {
+                if (city.textContent === citySelectArray[j].cities[k].textContent) {
+                    citySelectArray[j].citySelected = citySelectArray[j].cities[k];
+                    break;
+                }
+            }
+            citySelectArray[j].citySelected.classList.add('city-select__city-selected');
+        }
+    }
+}
+
+for (let i = 0; i < citySelects.length; i++) {
+    let select = {};
+    select.dropBtn = citySelects[i].querySelector('.city-select__drop-btn');
+    select.current = citySelects[i].querySelector('.city-select__current');
+    select.arrow = citySelects[i].querySelector('.city-select__arrow');
+    select.dropBlock = citySelects[i].querySelector('.city-select__drop');
+    select.closeBtn = citySelects[i].querySelector('.city-select__close');
+    select.citySelected = citySelects[i].querySelector('.city-select__city-selected');
+    select.cities = citySelects[i].querySelectorAll('.city-select__city');
+    citySelectArray.push(select);
+    select.dropBtn.addEventListener('click', () => {
+        select.dropBlock.classList.toggle('city-select__dropped');
+        select.arrow.classList.toggle('city-select__arrow-up');
     });
-    closeBtn.addEventListener('click', () => {
-        dropBlock.classList.remove('city-select__dropped');
-        arrow.classList.remove('city-select__arrow-up');
+    select.closeBtn.addEventListener('click', () => {
+        select.dropBlock.classList.remove('city-select__dropped');
+        select.arrow.classList.remove('city-select__arrow-up');
     });
-    cities.forEach(city => {
+    select.cities.forEach(city => {
         city.addEventListener('click', () => {
-            current.textContent = city.textContent;
-            dropBlock.classList.remove('city-select__dropped');
-            arrow.classList.remove('city-select__arrow-up');
-            citySelected = city;
-            citySelected.classList.add('city-select__city-selected');
+            chooseCity(i, city);
         });
+    });
+}
+
+citySelectArray.forEach(select => {
+    select.cities.forEach(city => {
         city.addEventListener('mouseover', () => {
-            citySelected.classList.remove('city-select__city-selected');
+            select.citySelected.classList.remove('city-select__city-selected');
         });
         city.addEventListener('mouseout', () => {
-            citySelected.classList.add('city-select__city-selected');
+            select.citySelected.classList.add('city-select__city-selected');
         });
     })
-})
+});
 
 let popupCallbackBackground = document.querySelector('.popup-callback-bg');
 let popupCallbackOpenBtns = document.querySelectorAll('.popup-callback-open-btn');
@@ -150,10 +187,9 @@ popupCallbackBackground.addEventListener('click', (event) => {
     }
 });
 
-popupCallbackCloseBtn.addEventListener('click', (event) => {
+popupCallbackCloseBtn.addEventListener('click', () => {
     popupCallbackBackground.classList.remove('popup-callback-bg-visible');
 });
-
 
 
 // валидация
@@ -180,7 +216,7 @@ function formValidate(form) {
         input.classList.remove('_error');
 
         if (input.classList.contains('_phone')) {
-            if(input.value.length < 18) {
+            if (input.value.length < 18) {
                 input.classList.add('_error');
                 error++;
             }
@@ -202,7 +238,7 @@ function mask(event) {
         def = matrix.replace(/\D/g, ""),
         val = this.value.replace(/\D/g, "");
     if (def.length >= val.length) val = def;
-    this.value = matrix.replace(/./g, function(a) {
+    this.value = matrix.replace(/./g, function (a) {
         return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
     });
     if (event.type === "blur") {
