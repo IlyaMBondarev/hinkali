@@ -133,18 +133,3 @@ let contacts = {
         'card': 'р/с 5336 6901 4445 9742',
     },
 }
-
-let cityName = document.querySelector('.city-select__city-selected').dataset.city;
-let cityContacts = document.querySelector('.city');
-let phone = document.querySelector('.city-phone');
-let delivery = document.querySelector('.city-delivery-in');
-let time = document.querySelector('.city-time-to-work');
-let mail = document.querySelector('.city-mail');
-let card = document.querySelector('.city-card');
-
-cityContacts.textContent = document.querySelector('.city-select__city-selected').textContent;
-phone.textContent = contacts[cityName].phone;
-delivery.textContent = contacts[cityName].delivery;
-time.textContent = contacts[cityName].time;
-mail.textContent = contacts[cityName].mail;
-card.textContent = contacts[cityName].card;
