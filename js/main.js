@@ -99,15 +99,23 @@ document.querySelectorAll('.slider').forEach(slider => {
     }, 10000)
 })
 //cities
+let cityName,
+    cityContacts,
+    phone,
+    delivery,
+    timeToDelievery,
+    mail,
+    card;
+
 
 if (document.querySelector('.contacts')) {
-    let cityName = document.querySelector('.city-select__city-selected').dataset.city;
-    let cityContacts = document.querySelector('.city');
-    let phone = document.querySelector('.city-phone');
-    let delivery = document.querySelector('.city-delivery-in');
-    let timeToDelievery = document.querySelector('.city-time-to-work');
-    let mail = document.querySelector('.city-mail');
-    let card = document.querySelector('.city-card');
+    cityName = document.querySelector('.city-select__city-selected').dataset.city;
+    cityContacts = document.querySelector('.city');
+    phone = document.querySelector('.city-phone');
+    delivery = document.querySelector('.city-delivery-in');
+    timeToDelievery = document.querySelector('.city-time-to-work');
+    mail = document.querySelector('.city-mail');
+    card = document.querySelector('.city-card');
 
     cityContacts.textContent = document.querySelector('.city-select__city-selected').textContent;
     phone.textContent = contacts[cityName].phone;
@@ -119,7 +127,48 @@ if (document.querySelector('.contacts')) {
 
 let citySelects = document.querySelectorAll('.city-select');
 
+let mobileCitySelect = document.querySelector('.burger-menu');
+
 let citySelectArray = [];
+let citySelectMobile = {};
+let burgerInput = document.querySelector('#burger');
+let burgerCitiesInput = document.querySelector('#mobileCities');
+
+citySelectMobile.current = mobileCitySelect.querySelector('.city-select__current');
+citySelectMobile.citySelected = mobileCitySelect.querySelector('.city-select__city-selected');
+citySelectMobile.cities = mobileCitySelect.querySelectorAll('.city-select__city');
+citySelectMobile.cities.forEach(city => {
+    city.addEventListener('click', () => {
+        citySelectMobile.current.textContent = city.textContent;
+        citySelectMobile.citySelected.classList.remove('city-select__city-selected');
+        citySelectMobile.citySelected = city;
+        citySelectMobile.citySelected.classList.add('city-select__city-selected');
+        if (document.querySelector('.contacts')) {
+            cityName = citySelectMobile.citySelected.dataset.city;
+            cityContacts.textContent = citySelectMobile.citySelected.textContent;
+            phone.textContent = contacts[cityName].phone;
+            delivery.textContent = contacts[cityName].delivery;
+            timeToDelievery.textContent = contacts[cityName].time;
+            mail.textContent = contacts[cityName].mail;
+            card.textContent = contacts[cityName].card;
+        }
+        for (let i = 0; i < citySelectArray.length; i++) {
+            citySelectArray[i].current.textContent = city.textContent;
+            citySelectArray[i].dropBlock.classList.remove('city-select__dropped');
+            citySelectArray[i].arrow.classList.remove('city-select__arrow-up');
+            citySelectArray[i].citySelected.classList.remove('city-select__city-selected');
+            for (let j = 0; citySelectArray[i].cities.length; j++) {
+                if (city.textContent === citySelectArray[i].cities[j].textContent) {
+                    citySelectArray[i].citySelected = citySelectArray[i].cities[j];
+                    break;
+                }
+            }
+            citySelectArray[i].citySelected.classList.add('city-select__city-selected');
+        }
+        burgerInput.checked = false;
+        burgerCitiesInput.checked = false;
+    });
+});
 
 function chooseCity(indexOfSelect, city) {
     citySelectArray[indexOfSelect].current.textContent = city.textContent;
@@ -151,6 +200,15 @@ function chooseCity(indexOfSelect, city) {
             citySelectArray[j].citySelected.classList.add('city-select__city-selected');
         }
     }
+    citySelectMobile.current.textContent = city.textContent;
+    citySelectMobile.citySelected.classList.remove('city-select__city-selected');
+    for (let i = 0; citySelectMobile.cities.length; i++) {
+        if (city.textContent === citySelectMobile.cities[i].textContent) {
+            citySelectMobile.citySelected = citySelectMobile.cities[i];
+            break;
+        }
+    }
+    citySelectMobile.citySelected.classList.add('city-select__city-selected');
 }
 
 for (let i = 0; i < citySelects.length; i++) {
@@ -188,6 +246,7 @@ citySelectArray.forEach(select => {
         });
     })
 });
+
 
 //call back
 
@@ -282,6 +341,8 @@ carts.forEach(cart => {
     let cartBlock = cart.querySelector('.cart');
     button.addEventListener('click', () => cartBlock.classList.toggle('cart-opened'));
 })
+
+
 
 const isMobile = window.navigator.userAgent.match(/Mobile/) && window.navigator.userAgent.match(/Mobile/)[0] === "Mobile";
 const event = isMobile ? "touchstart" : "mouseover";
