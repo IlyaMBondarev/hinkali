@@ -461,6 +461,11 @@ h1, h2, h3, h4, h5, h6 {
 .city-select__drop-footer {
   bottom: 120%;
 }
+@media (max-width: 800px) {
+  .city-select__drop-footer {
+    flex-direction: column;
+  }
+}
 .city-select__dropped {
   transition: opacity 0.3s ease-in-out;
   display: flex;
