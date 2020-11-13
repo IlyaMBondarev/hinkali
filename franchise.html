@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Франшиза</title>
+    <link rel="stylesheet" href="css/franchise.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+<div class="wrapper">
+    <main class="page">
+<header class="header">
+    <div class="container">
+        <div class="header__row header__row-mobile header-mobile">
+            <div class="header-mobile__burger">
+                <input id="burger" type="checkbox" class="burger-checkbox-switch">
+                <label for="burger" class="burger-checkbox"><span></span></label>
+                <div class="burger-menu-bg">
+                    <label for="burger"></label>
+                    <div class="burger-menu">
+                        <input type="checkbox" id="mobileCities" class="burger-menu__open-cities-btn">
+                        <label for="mobileCities" class="burger-menu__open-cities"><i class="fa fa-map-marker-alt"></i><span class="city-select__current">Москва</span></label>
+                        <div class="burger-menu__cities _scroll">
+                            <label for="mobileCities" class="burger-menu__close-cities"><i class="fa fa-chevron-left"></i><span>Назад</span><span></span></label>
+                            <ul>
+                                <li class="city-select__city city-select__city-selected" data-city="Moscow">Москва</li>
+                                <li class="city-select__city" data-city="St. Petersburg">Санкт-Петербург</li>
+                                <li class="city-select__city" data-city="Novosibirsk">Новосибирск</li>
+                                <li class="city-select__city" data-city="Ekaterinburg">Екатеринбург</li>
+                                <li class="city-select__city" data-city="Kazan">Казань</li>
+                                <li class="city-select__city" data-city="Nizhny Novgorod">Нижний Новгород</li>
+                                <li class="city-select__city" data-city="Chelyabinsk">Челябинск</li>
+                                <li class="city-select__city" data-city="Samara">Самара</li>
+                                <li class="city-select__city" data-city="Omsk">Омск</li>
+                                <li class="city-select__city" data-city="Rostov-on-Don">Ростов-на-Дону</li>
+                                <li class="city-select__city" data-city="Ufa">Уфа</li>
+                                <li class="city-select__city" data-city="Krasnoyarsk">Красноярск</li>
+                                <li class="city-select__city" data-city="Voronezh">Воронеж</li>
+                                <li class="city-select__city" data-city="Permian">Пермь</li>
+                                <li class="city-select__city" data-city="Volgograd">Волгоград</li>
+                                <li class="city-select__city" data-city="Krasnodar">Краснодар</li>
+                                <li class="city-select__city" data-city="Saratov">Саратов</li>
+                                <li class="city-select__city" data-city="Tyumen">Тюмень</li>
+                                <li class="city-select__city" data-city="Tolyatti">Тольятти</li>
+                            </ul>
+                            <button class="scroll-down"><i class="fa fa-chevron-down"></i></button>
+                        </div>
+                        <input type="checkbox" id="mobileMenu" class="burger-menu__open">
+                        <label for="mobileMenu" class="burger-menu__open-list"><span>Меню</span><i class="fa fa-chevron-right"></i></label>
+                        <div class="burger-menu__list _scroll">
+                            <label for="mobileMenu" class="burger-menu__close-list"><i class="fa fa-chevron-left"></i><span>Назад</span><span></span></label>
+                            <ul>
+                                <li><a href="catalog.html">Хинкали</a></li>
+                                <li><a href="catalog.html">Хачапури</a></li>
+                                <li><a href="catalog.html">Шашлыки</a></li>
+                                <li><a href="catalog.html">Соусы</a></li>
+                                <li><a href="catalog.html">Закуски</a></li>
+                                <li><a href="catalog.html">Горячее</a></li>
+                                <li><a href="catalog.html">Супы</a></li>
+                                <li><a href="catalog.html">Салаты</a></li>
+                                <li><a href="catalog.html">Десерты</a></li>
+                                <li><a href="catalog.html">Напитки</a></li>
+                            </ul>
+                            <button class="scroll-down"><i class="fa fa-chevron-down"></i></button>
+                        </div>
+                        <div class="burger-menu__links">
+                            <a href="#" class="header__link burger-menu__link">О компании</a>
+                            <a href="contacts.html" class="header__link burger-menu__link">Контакты</a>
+                            <a href="#" class="header__link burger-menu__link">Франшиза</a>
+                        </div>
+                        <p class="burger-menu__phone">+7 (495) 507-17-77</p>
+                        <p class="burger-menu__text">Бесплатная доставка</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header-mobile__logo">
+                <div class="header__logo">
+                    <a href="index.html"><img src="img/logo_letter.png" alt="logo"></a>
+                </div>
+                <div class="header__column">
+                    <div class="header__city-select city-select">
+                        <button class="city-select__drop-btn">
+                            <span class="city-select__current border-bottom">Москва</span>
+                            <i class="fa fa-chevron-down city-select__arrow"></i>
+                        </button>
+                        <div class="city-select__drop city-select__drop-header">
+                            <button class="city-select__close">+</button>
+                            <ul class="city-select__list">
+                                <li class="city-select__city city-select__city-selected" data-city="Moscow">Москва</li>
+                                <li class="city-select__city" data-city="St. Petersburg">Санкт-Петербург</li>
+                                <li class="city-select__city" data-city="Novosibirsk">Новосибирск</li>
+                                <li class="city-select__city" data-city="Ekaterinburg">Екатеринбург</li>
+                                <li class="city-select__city" data-city="Kazan">Казань</li>
+                                <li class="city-select__city" data-city="Nizhny Novgorod">Нижний Новгород</li>
+                                <li class="city-select__city" data-city="Chelyabinsk">Челябинск</li>
+                                <li class="city-select__city" data-city="Samara">Самара</li>
+                                <li class="city-select__city" data-city="Omsk">Омск</li>
+                                <li class="city-select__city" data-city="Rostov-on-Don">Ростов-на-Дону</li>
+                                <li class="city-select__city" data-city="Ufa">Уфа</li>
+                                <li class="city-select__city" data-city="Krasnoyarsk">Красноярск</li>
+                                <li class="city-select__city" data-city="Voronezh">Воронеж</li>
+                                <li class="city-select__city" data-city="Permian">Пермь</li>
+                                <li class="city-select__city" data-city="Volgograd">Волгоград</li>
+                                <li class="city-select__city" data-city="Krasnodar">Краснодар</li>
+                                <li class="city-select__city" data-city="Saratov">Саратов</li>
+                                <li class="city-select__city" data-city="Tyumen">Тюмень</li>
+                                <li class="city-select__city" data-city="Tolyatti">Тольятти</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="header__text"><span>Выберите город</span></p>
+                </div>
+            </div>
+            <div class="header-mobile__cart cart-block">
+                <button class="header-mobile__cart-btn cart-btn">
+                    <img src="img/icons/food.png" alt="food">
+                    <span class="count">10</span>
+                    <span class="total">1620 <span class="bold">₽</span></span>
+                </button>
+                <div class="cart">
+                    <div class="cart__items">
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__result">
+                        <div class="cart__content">Сумма заказа:</div>
+                        <div class="cart__total"><span>4050</span> <span class="bold">₽</span></div>
+                    </div>
+                    <div class="cart__button">
+                        <a href="basket.html" class="cart__submit" data-animation="ripple">офрмить заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__row">
+            <div class="header__logo">
+                <a href="index.html"><img src="img/logo_letter.png" alt="logo"></a>
+            </div>
+            <div class="header__content">
+                <div class="header__column header__left">
+                    <div class="header__city-select city-select">
+                        <button class="city-select__drop-btn">
+                            <span class="city-select__current border-bottom">Москва</span>
+                            <i class="fa fa-chevron-down city-select__arrow"></i>
+                        </button>
+                        <div class="city-select__drop city-select__drop-header">
+                            <button class="city-select__close">+</button>
+                            <ul class="city-select__list">
+                                <li class="city-select__city city-select__city-selected" data-city="Moscow">Москва</li>
+                                <li class="city-select__city" data-city="St. Petersburg">Санкт-Петербург</li>
+                                <li class="city-select__city" data-city="Novosibirsk">Новосибирск</li>
+                                <li class="city-select__city" data-city="Ekaterinburg">Екатеринбург</li>
+                                <li class="city-select__city" data-city="Kazan">Казань</li>
+                                <li class="city-select__city" data-city="Nizhny Novgorod">Нижний Новгород</li>
+                                <li class="city-select__city" data-city="Chelyabinsk">Челябинск</li>
+                            </ul>
+                            <ul class="city-select__list">
+                                <li class="city-select__city" data-city="Samara">Самара</li>
+                                <li class="city-select__city" data-city="Omsk">Омск</li>
+                                <li class="city-select__city" data-city="Rostov-on-Don">Ростов-на-Дону</li>
+                                <li class="city-select__city" data-city="Ufa">Уфа</li>
+                                <li class="city-select__city" data-city="Krasnoyarsk">Красноярск</li>
+                                <li class="city-select__city" data-city="Voronezh">Воронеж</li>
+                            </ul>
+                            <ul class="city-select__list">
+                                <li class="city-select__city" data-city="Permian">Пермь</li>
+                                <li class="city-select__city" data-city="Volgograd">Волгоград</li>
+                                <li class="city-select__city" data-city="Krasnodar">Краснодар</li>
+                                <li class="city-select__city" data-city="Saratov">Саратов</li>
+                                <li class="city-select__city" data-city="Tyumen">Тюмень</li>
+                                <li class="city-select__city" data-city="Tolyatti">Тольятти</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="header__text"><span>Доставка</span> <span>с 10.00 до 22.00</span></p>
+                </div>
+                <div class="header__column header__center">
+                    <p class="header__text">Бесплатная доставка</p>
+                    <a href="tel:+74955071777" class="header__phone">+7 (495) 507-17-77</a>
+                    <button class="header__call-btn popup-callback-open-btn border-bottom">Перезвоните мне</button>
+                </div>
+                <div class="header__column header__right">
+                    <a href="about.html" class="header__link">О компании</a>
+                    <a href="contacts.html" class="header__link">Контакты</a>
+                    <a href="franchise.html" class="header__link">Франшиза</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav id="nav" class="nav">
+    <div class="container">
+        <div class="nav__row">
+            <ul class="nav__menu">
+                <li><a href="catalog.html" class="nav__link">Хинкали</a></li>
+                <li><a href="catalog.html" class="nav__link">Хачапури</a></li>
+                <li><a href="catalog.html" class="nav__link">Шашлыки</a></li>
+                <li><a href="catalog.html" class="nav__link">Соусы</a></li>
+                <li><a href="catalog.html" class="nav__link">Закуски</a></li>
+                <li><a href="catalog.html" class="nav__link">Горячее</a></li>
+                <li><a href="catalog.html" class="nav__link">Супы</a></li>
+                <li><a href="catalog.html" class="nav__link">Салаты</a></li>
+                <li><a href="catalog.html" class="nav__link">Десерты</a></li>
+                <li><a href="catalog.html" class="nav__link">Напитки</a></li>
+            </ul>
+            <div class="nav__cart-block cart-block">
+                <button class="nav__cart-btn cart-btn">
+                    <img src="img/icons/food.png" alt="food">
+                    <span class="count">10</span>
+                    <span class="total">1620 <span class="bold">₽</span></span>
+                </button>
+                <div class="cart">
+                    <div class="cart__items">
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__result">
+                        <div class="cart__content">Сумма заказа:</div>
+                        <div class="cart__total"><span>4050</span> <span class="bold">₽</span></div>
+                    </div>
+                    <div class="cart__button">
+                        <a href="basket.html" class="cart__submit" data-animation="ripple">офрмить заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<nav id="navMobile" class="nav nav-mobile">
+    <div class="container">
+        <div class="nav__row">
+            <div class="nav-mobile__phone">
+                <a href="tel:+74955071777">+7 (495) 507-17-77</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div id="topNav" class="nav">
+    <div class="container">
+        <div class="nav__row">
+            <ul class="nav__menu">
+                <li><a href="catalog.html" class="nav__link">Хинкали</a></li>
+                <li><a href="catalog.html" class="nav__link">Хачапури</a></li>
+                <li><a href="catalog.html" class="nav__link">Шашлыки</a></li>
+                <li><a href="catalog.html" class="nav__link">Соусы</a></li>
+                <li><a href="catalog.html" class="nav__link">Закуски</a></li>
+                <li><a href="catalog.html" class="nav__link">Горячее</a></li>
+                <li><a href="catalog.html" class="nav__link">Супы</a></li>
+                <li><a href="catalog.html" class="nav__link">Салаты</a></li>
+                <li><a href="catalog.html" class="nav__link">Десерты</a></li>
+                <li><a href="catalog.html" class="nav__link">Напитки</a></li>
+            </ul>
+            <div class="nav__phone"><a href="tel:+74955071777" class="nav__phone-link">+7 (495) 507-17-77</a></div>
+            <div class="nav__cart-block cart-block">
+                <button class="nav__cart-btn cart-btn">
+                    <img src="img/icons/food.png" alt="food">
+                    <span class="count">10</span>
+                    <span class="total">1620 <span class="bold">₽</span></span>
+                </button>
+                <div class="cart">
+                    <div class="cart__items">
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item item">
+                            <div class="item__image">
+                                <img src="img/product.jpg" alt="">
+                            </div>
+                            <div class="item__info">
+                                <div class="item__row">
+                                    <a href="product.html" class="item__name">Хинкали с картошкой и морковью</a>
+                                    <button class="item__clear">
+                                        <img src="img/icons/clear-roof.png" alt="roof" class="item__clear-roof">
+                                        <img src="img/icons/clear-bottom.png" alt="bottom" class="item__clear-bottom">
+                                    </button>
+                                </div>
+                                <div class="item__row">
+                                    <div class="item__counts">
+                                        <button class="item__count-less">-</button>
+                                        <span class="item__count">1</span>
+                                        <button class="item__count-more">+</button>
+                                    </div>
+                                    <div class="item__price"><span>1350</span> <span class="bold">₽</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__result">
+                        <div class="cart__content">Сумма заказа:</div>
+                        <div class="cart__total"><span>4050</span> <span class="bold">₽</span></div>
+                    </div>
+                    <div class="cart__button">
+                        <a href="basket.html" class="cart__submit" data-animation="ripple">офрмить заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-callback-bg">
+    <div class="popup-callback">
+        <button class="popup-callback__close">+</button>
+        <form action="#" class="popup-callback__form" id="popupCallbackForm">
+            <div class="popup-callback__block">
+                <label for="popupCallbackName">Ваше имя:</label>
+                <input id="popupCallbackName" type="text" placeholder="Анастасия" class="_req">
+                <span>Имя должно быть от 3 до 32 символов!</span>
+            </div>
+            <div class="popup-callback__block">
+                <label for="popupCallbackPhone">Телефон:</label>
+                <input id="popupCallbackPhone" type="tel" placeholder="+7 (926) 000-00-00" class="_req _phone masked">
+                <span>Номер введен неверно!</span>
+            </div>
+            <!-- <p class="popup-callback__content">Наш оператор свяжется с Вами для уточнения деталей заказа.</p> -->
+            <button class="popup-callback__button" type="submit">оставить заявку</button>
+        </form>
+    </div>
+</div>        <div class="content">
+            <div class="franchise-banner">
+                <div class="franchise-banner__text-block">
+                    <div class="container">
+                        <div class="franchise-banner__block franchise-banner__title">
+                            <h2><span>Франшиза</span> доставки еды</h2>
+                            <p>сеть Хинкальная&nbsp;№1</p>
+                        </div>
+                        <div class="franchise-banner__block franchise-banner__subtitle">
+                            <p>Доставка грузинской кухни в&nbsp;дом и&nbsp;офис</p>
+                        </div>
+                        <div class="franchise-banner__block franchise-banner__content">
+                            <p>С&nbsp;выездом специалистов в&nbsp;Ваш город</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info container">
+                <div class="info__block">
+                    <div class="info__circle"><span>800</span></div>
+                    <p class="info__content">от&nbsp;800&nbsp;тыс.&nbsp;руб. инвестиции в оборудование</p>
+                </div>
+                <div class="info__block">
+                    <div class="info__circle"><span>6</span></div>
+                    <p class="info__content">Окупаемость от&nbsp;6&nbsp;месяцев</p>
+                </div>
+                <div class="info__block">
+                    <div class="info__circle"><span>600</span></div>
+                    <p class="info__content">Паушальный взнос от&nbsp;600 тыс.&nbsp;руб.</p>
+                    <p class="info__content-small">*&nbsp;в&nbsp;зависимости от&nbsp;региона</p>
+                </div>
+                <div class="info__block">
+                    <div class="info__circle"><span>5%</span></div>
+                    <p class="info__content">5% в&nbsp;месяц роялти</p>
+                </div>
+            </div>
+            <div class="franchise-about container">
+                <p class="franchise-title franchise-about__title">немного <span>о франшизе</span></p>
+                <p class="franchise-about__content">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности требуют от&nbsp;нас анализа дальнейших направлениЗначимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности способствует подготовки и&nbsp;реализации существенных финансовых и&nbsp;административных условий. Повседневная практика показывает, что реализация намеченных плановых заданий способствует подготовки и&nbsp;реализации позиций, занимаемых участниками в&nbsp;отношении поставленных задач. Идейные соображения высшего порядка, а&nbsp;также реализация намеченных плановых заданий позволяет выполнять важные задания по&nbsp;разработке позиций. развития. Разнообразный и&nbsp;богатый опыт новая модель организационной деятельности в&nbsp;значительной степени обуславливает создание модели развития. Таким образом сложившаяся структура организации играет важную роль в&nbsp;формировании позиций, занимаемых участниками в&nbsp;отношении поставленных задач.</p>
+                <a href="" class="franchise-about__link slide-in">Узнать подробнее о&nbsp;компании</a>
+            </div>
+            <div class="franchise-request">
+                <div class="franchise-request__block container">
+                    <p class="franchise-request__title">ТЕКСТ ВАШЕГО УНИКАЛЬНОГО ПРЕДЛОЖЕНИЯ</p>
+                    <p class="franchise-request__subtitle">Небольшой поясняющий текст, дополняющий заголовок выше</p>
+                    <form action="#" class="franchise-request__form">
+                        <input type="text" placeholder="Ваше Имя">
+                        <input type="tel" class="_phone" placeholder="Ваш Телефон">
+                        <button type="submit" data-animation="ripple">Отправить заявку</button>
+                        <p class="franchise-request__form-agreement">Нажимая кнопку действия, Вы соглашаетесь с&nbsp;<a href="#" class="border-bottom">пользовательским соглашением</a></p>
+                    </form>
+                </div>
+            </div>
+            <p class="franchise-title">что вы <span>получаете</span></p>
+            <p class="franchise-subtitle">открывая доставку от сети Хинкальной №1</p>
+            <div class="chiefs franchise-chiefs container">
+                <div class="chiefs__block">
+                    <div class="chiefs__image-form">
+                        <div class="chiefs__image-bg">
+                            <img src="img/about/photo.jpg" alt="photo" class="chiefs__image">
+                        </div>
+                    </div>
+                    <div class="chiefs__info">
+                        <div class="chiefs__title">Ваш заголовок</div>
+                        <p class="chiefs__content">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности требуют от&nbsp;нас анализа дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт новая модель организационной деятельности в&nbsp;значительной степени обуславливает создание модели развития. Таким образом сложившаяся структура организации играет важную роль в&nbsp;формировании позиций, занимаемых участниками в&nbsp;отношении поставленных задач.</p>
+                    </div>
+                </div>
+                <div class="chiefs__block">
+                    <div class="chiefs__image-form">
+                        <div class="chiefs__image-bg">
+                            <img src="img/about/photo.jpg" alt="photo" class="chiefs__image">
+                        </div>
+                    </div>
+                    <div class="chiefs__info">
+                        <div class="chiefs__title">Ваш заголовок</div>
+                        <p class="chiefs__content">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности требуют от&nbsp;нас анализа дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт новая модель организационной деятельности в&nbsp;значительной степени обуславливает создание модели развития. Таким образом сложившаяся структура организации играет важную роль в&nbsp;формировании позиций, занимаемых участниками в&nbsp;отношении поставленных задач.</p>
+                    </div>
+                </div>
+                <div class="chiefs__block">
+                    <div class="chiefs__image-form">
+                        <div class="chiefs__image-bg">
+                            <img src="img/about/photo.jpg" alt="photo" class="chiefs__image">
+                        </div>
+                    </div>
+                    <div class="chiefs__info">
+                        <div class="chiefs__title">Ваш заголовок</div>
+                        <p class="chiefs__content">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности требуют от&nbsp;нас анализа дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт новая модель организационной деятельности в&nbsp;значительной степени обуславливает создание модели развития. Таким образом сложившаяся структура организации играет важную роль в&nbsp;формировании позиций, занимаемых участниками в&nbsp;отношении поставленных задач.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="franchise-title"><span>приоритетные</span> города для открытия</p>
+            <p class="franchise-subtitle">только один партнер на город</p>
+            <div class="franchise-cities">
+                <div class="franchise-cities__block franchise-cities__block1 flying-block">
+                    <img src="img/franchise/gerb_krasnodar.png" alt="gerb" class="franchise-cities__icon">
+                    <span class="franchise-cities__city-name">Краснодар</span>
+                </div>
+                <div class="franchise-cities__block franchise-cities__block2 flying-block">
+                    <img src="img/franchise/gerb_voronezh.png" alt="gerb" class="franchise-cities__icon">
+                    <span class="franchise-cities__city-name">Воронеж</span>
+                </div>
+                <div class="franchise-cities__block franchise-cities__block3 flying-block">
+                    <img src="img/franchise/gerb_S-Pb.png" alt="gerb" class="franchise-cities__icon">
+                    <span class="franchise-cities__city-name">Санкт-Петербург</span>
+                </div>
+                <div class="franchise-cities__block franchise-cities__block4 flying-block">
+                    <img src="img/franchise/gerb_Habarovsk.png" alt="gerb" class="franchise-cities__icon">
+                    <span class="franchise-cities__city-name">Хабаровск</span>
+                </div>
+                <div class="franchise-cities__block franchise-cities__block5 flying-block">
+                    <img src="img/franchise/gerb_Rostov.png" alt="gerb" class="franchise-cities__icon">
+                    <span class="franchise-cities__city-name">Ростов-на-Дону</span>
+                </div>
+            </div>
+            <p class="franchise-title"><span>почему выгодно</span> открыть бизнес</p>
+            <p class="franchise-subtitle">по доставке грузинской еды в 2020 году</p>
+            <div class="franchise-round container">
+                <img src="img/franchise/bg_shashlik.png" alt="photo">
+                <div class="franchise-round__block">
+                    <p class="franchise-round__title">Растущий рынок</p>
+                    <p class="franchise-round__content">Текст вашего преимущества, Текст вашего преимущества</p>
+                </div>
+                <div class="franchise-round__block">
+                    <p class="franchise-round__title">Реальная экономия</p>
+                    <p class="franchise-round__content">Текст вашего преимущества, Текст вашего преимущества</p>
+                </div>
+                <div class="franchise-round__block">
+                    <p class="franchise-round__title">Минимум персонала</p>
+                    <p class="franchise-round__content">Текст вашего преимущества, Текст вашего преимущества</p>
+                </div>
+                <div class="franchise-round__block">
+                    <p class="franchise-round__title">Легкий вход</p>
+                    <p class="franchise-round__content">Текст вашего преимущества, Текст вашего преимущества</p>
+                </div>
+                <div class="franchise-round__block">
+                    <p class="franchise-round__title">Быстрая окупаемость</p>
+                    <p class="franchise-round__content">Текст вашего преимущества, Текст вашего преимущества</p>
+                </div>
+                <div class="franchise-round__block">
+                    <p class="franchise-round__title">Все преимущества Хинкальной&nbsp;№1</p>
+                    <p class="franchise-round__content">Текст вашего преимущества, Текст вашего преимущества</p>
+                </div>
+            </div>
+            <div class="franchise-consult">
+                <div class="franchise-consult__block container">
+                    <p class="franchise-consult__title">Запишитесь на <span>персональную</span> консультацию от <span>ОСНОВАТЕЛЯ</span> доставки Хинкальной №1 в городе Москва</p>
+                    <p class="franchise-consult__subtitle">Заполните форму ниже и мы сами Вам перезвоним</p>
+                    <form action="#" class="franchise-consult__form">
+                        <input type="text" placeholder="Ваше Имя">
+                        <input type="tel" class="_phone" placeholder="Ваш Телефон">
+                        <button type="submit" data-animation="ripple">Хочу консультацию</button>
+                    </form>
+                    <p class="franchise-consult__agreement">Нажимая кнопку действия, Вы соглашаетесь с <a href="#" class="border-bottom">пользовательским соглашением</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-without-border-top">
+<div class="footer__header">
+    <div class="container">
+        <div class="footer__header-row">
+            <div class="header__logo">
+                <img src="img/logo_letter.png" alt="logo">
+            </div>
+            <div class="header__content">
+                <div class="header__column header__left">
+                    <div class="header__city-select city-select">
+                        <button class="city-select__drop-btn">
+                            <span class="city-select__current">Москва</span>
+                            <i class="fa fa-chevron-down city-select__arrow"></i>
+                        </button>
+                        <div class="city-select__drop city-select__drop-footer">
+                            <button class="city-select__close">+</button>
+                            <ul class="city-select__list">
+                                <li class="city-select__city city-select__city-selected" data-city="Moscow">Москва</li>
+                                <li class="city-select__city" data-city="St. Petersburg">Санкт-Петербург</li>
+                                <li class="city-select__city" data-city="Novosibirsk">Новосибирск</li>
+                                <li class="city-select__city" data-city="Ekaterinburg">Екатеринбург</li>
+                                <li class="city-select__city" data-city="Kazan">Казань</li>
+                                <li class="city-select__city" data-city="Nizhny Novgorod">Нижний Новгород</li>
+                                <li class="city-select__city" data-city="Chelyabinsk">Челябинск</li>
+                            </ul>
+                            <ul class="city-select__list">
+                                <li class="city-select__city" data-city="Samara">Самара</li>
+                                <li class="city-select__city" data-city="Omsk">Омск</li>
+                                <li class="city-select__city" data-city="Rostov-on-Don">Ростов-на-Дону</li>
+                                <li class="city-select__city" data-city="Ufa">Уфа</li>
+                                <li class="city-select__city" data-city="Krasnoyarsk">Красноярск</li>
+                                <li class="city-select__city" data-city="Voronezh">Воронеж</li>
+                            </ul>
+                            <ul class="city-select__list">
+                                <li class="city-select__city" data-city="Permian">Пермь</li>
+                                <li class="city-select__city" data-city="Volgograd">Волгоград</li>
+                                <li class="city-select__city" data-city="Krasnodar">Краснодар</li>
+                                <li class="city-select__city" data-city="Saratov">Саратов</li>
+                                <li class="city-select__city" data-city="Tyumen">Тюмень</li>
+                                <li class="city-select__city" data-city="Tolyatti">Тольятти</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="header__text"><span>Доставка</span> <span>с 10.00 до 22.00</span></p>
+                </div>
+                <div class="header__column header__center">
+                    <p class="header__text">Бесплатная доставка</p>
+                    <a href="tel:+74955071777" class="header__phone">+7 (495) 507-17-77</a>
+                    <button class="header__call-btn popup-callback-open-btn border-bottom">Перезвоните мне</button>
+                </div>
+                <div class="header__column header__right">
+                    <a href="about.html" class="header__link">О компании</a>
+                    <a href="contacts.html" class="header__link">Контакты</a>
+                    <a href="franchise.html" class="header__link">Франшиза</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__row">
+            <div class="footer__column"><span>Все права защищены &copy; 2019 -2020</span></div>
+            <div class="footer__column"><a href="#" target="_blank"><span>Политика конфиденциальности</span></a></div>
+            <div class="footer__column"><a href="https://agtesla.ru" target="_blank"><span>Создание сайтов Веб-студия “Тесла”</span></a></div>
+        </div>
+    </div>
+</footer>        </div>
+    </main>
+</div>
+<script src="js/main.js"></script></body>
+</html>

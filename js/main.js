@@ -58,6 +58,23 @@ function myScroll() {
 }
 
 
+let scrollLists = document.querySelectorAll('._scroll');
+
+scrollLists.forEach(list => {
+    let ul = list.querySelector('ul');
+    let arrow = list.querySelector('.scroll-down');
+    let scrolling;
+    arrow.addEventListener('mousedown', () => {
+        scrolling = setInterval(function scrollDown() {
+            ul.scrollBy(0, 2);
+        }, 20)
+    });
+    arrow.addEventListener('mouseup', () => {
+        clearInterval(scrolling);
+    })
+})
+
+
 document.querySelectorAll('.slider').forEach(slider => {
     let slides = slider.querySelector('.slider__slides');
     let buttons = slider.querySelectorAll('.slider__button');
