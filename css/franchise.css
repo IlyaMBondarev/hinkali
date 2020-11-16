@@ -334,6 +334,17 @@ h1, h2, h3, h4, h5, h6 {
 .franchise-title span {
   color: #f44601;
 }
+@media (max-width: 900px) {
+  .franchise-title {
+    font-size: 35px;
+    text-align: center;
+  }
+}
+@media (max-width: 550px) {
+  .franchise-title {
+    font-size: 24px;
+  }
+}
 
 .franchise-subtitle {
   font-size: 40px;
@@ -1543,14 +1554,38 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #faf8f9;
   background-image: url("../img/franchise/bg_first.jpg");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: 69% 0%;
+}
+@media (max-width: 900px) {
+  .franchise-banner {
+    min-height: 400px;
+    background-size: cover;
+    background-position: 45% 0%;
+  }
+}
+@media (max-width: 600px) {
+  .franchise-banner {
+    min-height: auto;
+  }
+}
+@media (max-width: 400px) {
+  .franchise-banner {
+    background-position: 55% 0%;
+  }
 }
 .franchise-banner > .franchise-banner__text-block {
   padding-top: 81px;
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
+}
+@media (max-width: 900px) {
+  .franchise-banner > .franchise-banner__text-block {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .franchise-banner > .franchise-banner__text-block {
+    padding-bottom: 40px;
+  }
 }
 .franchise-banner__block {
   color: #444343;
@@ -1561,6 +1596,17 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 900px) {
+  .franchise-banner__block {
+    min-height: auto;
+  }
+}
+@media (max-width: 550px) {
+  .franchise-banner__block {
+    padding-left: 10px;
+    min-height: 46px;
+  }
+}
 .franchise-banner__title h2 {
   font-family: "meiryob";
   font-size: 30px;
@@ -1570,9 +1616,46 @@ h1, h2, h3, h4, h5, h6 {
 .franchise-banner__title h2 span {
   font-size: 45px;
 }
+@media (max-width: 900px) {
+  .franchise-banner__title h2 {
+    font-size: 24px;
+  }
+  .franchise-banner__title h2 span {
+    font-size: 33px;
+  }
+}
+@media (max-width: 550px) {
+  .franchise-banner__title h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .franchise-banner__title h2 span {
+    font-size: 24px;
+  }
+}
+@media (max-width: 400px) {
+  .franchise-banner__title h2 {
+    font-size: 16px;
+  }
+  .franchise-banner__title h2 span {
+    font-size: 20px;
+  }
+}
 .franchise-banner__title p {
   font-size: 35px;
   line-height: 36px;
+}
+@media (max-width: 900px) {
+  .franchise-banner__title p {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 550px) {
+  .franchise-banner__title p {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 .franchise-banner__subtitle {
   font-size: 30px;
@@ -1581,11 +1664,37 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 59px;
   max-width: 524px;
 }
+@media (max-width: 900px) {
+  .franchise-banner__subtitle {
+    font-size: 24px;
+    line-height: 26px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 550px) {
+  .franchise-banner__subtitle {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
 .franchise-banner__content {
   font-size: 30px;
   line-height: 28px;
   margin-top: 50px;
   max-width: 424px;
+}
+@media (max-width: 900px) {
+  .franchise-banner__content {
+    font-size: 24px;
+    line-height: 26px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 550px) {
+  .franchise-banner__content {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .info {
@@ -1595,11 +1704,44 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   margin-top: -95px;
 }
+@media (max-width: 900px) {
+  .info {
+    margin-top: -50px;
+  }
+}
+@media (max-width: 600px) {
+  .info {
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 400px) {
+  .info {
+    justify-content: center;
+  }
+}
 .info__block {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 214px;
+}
+@media (max-width: 900px) {
+  .info__block {
+    max-width: 20%;
+  }
+}
+@media (max-width: 600px) {
+  .info__block {
+    max-width: initial;
+    width: 48%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .info__block {
+    width: 80%;
+  }
 }
 .info__circle {
   width: 170px;
@@ -1614,6 +1756,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #424141;
   letter-spacing: -1.5px;
 }
+@media (max-width: 900px) {
+  .info__circle {
+    width: 100px;
+    height: 100px;
+    font-size: 35px;
+  }
+}
 .info__content {
   font-size: 22px;
   color: #444343;
@@ -1621,26 +1770,60 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-top: 19px;
 }
+@media (max-width: 900px) {
+  .info__content {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
 .info__content-small {
   font-size: 19px;
   line-height: 18px;
   color: #444343;
   text-align: center;
 }
+@media (max-width: 900px) {
+  .info__content-small {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
 
 .franchise-about {
   background-image: url("../img/franchise/povar.png");
   background-repeat: no-repeat;
   background-position: bottom left;
+  background-size: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   margin-top: 20px;
   padding-bottom: 96px;
 }
+@media (max-width: 600px) {
+  .franchise-about {
+    background: #faf8f9 none;
+    align-items: center;
+  }
+}
+@media (max-width: 550px) {
+  .franchise-about {
+    padding-bottom: 50px;
+  }
+}
 .franchise-about__title {
   text-align: right;
   margin-top: 68px;
+}
+@media (max-width: 600px) {
+  .franchise-about__title {
+    text-align: center;
+  }
+}
+@media (max-width: 550px) {
+  .franchise-about__title {
+    margin-top: 30px;
+  }
 }
 .franchise-about__content {
   font-size: 22px;
@@ -1650,6 +1833,19 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 62%;
   margin-top: 40px;
   margin-bottom: 70px;
+}
+@media (max-width: 900px) {
+  .franchise-about__content {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .franchise-about__content {
+    max-width: 95%;
+  }
 }
 .franchise-about__link {
   text-align: right;
@@ -1661,6 +1857,19 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #f44601;
   border-radius: 10px;
   background-color: transparent;
+}
+@media (max-width: 900px) {
+  .franchise-about__link {
+    font-size: 16px;
+    padding: 16px;
+  }
+}
+@media (max-width: 550px) {
+  .franchise-about__link {
+    padding: 14px 0;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .franchise-request {
