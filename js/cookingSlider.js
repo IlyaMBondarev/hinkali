@@ -4,7 +4,7 @@ var sliderTeam = (function(document, $) {
         $list = $('#list'),
         $listItems = $('#list li'),
         $nItems = $listItems.length,
-        $nView = 3,
+        $nView = body.clientWidth > 550 ? 3 : 1,
         autoSlider,
         $current = 0,
         $isAuto = true,
@@ -17,10 +17,10 @@ var sliderTeam = (function(document, $) {
 
         _initWidth = function() {
             $list.css({
-                'margin-left': ~~(100 / $nView) + '%',
+                'margin-left': body.clientWidth > 550 ? ~~(100 / $nView) + '%' : ~~((100 / $nView) - 100) + '%',
                 'width': ~~(100 * ($nItems / $nView)) + '%'
             });
-            $listItems.css('width', 100 / $nItems + '%');
+            $listItems.css('width', Math.round(100 / $nItems) + '%');
             $sliderTeams.velocity({ opacity: 1 }, { display: "block" }, { delay:1000 });
         },
 
@@ -89,7 +89,7 @@ var sliderTeam = (function(document, $) {
             $listItems.not(obj).find('.cooking__image-form').removeClass('active');
 
             $list.velocity({
-                translateX: ~~((-(100 / $nItems)) * n) + '%',
+                translateX: ~~((-(Math.round(100 / $nItems))) * n) + '%',
                 translateZ: 0
             }, {
                 duration: 1000,

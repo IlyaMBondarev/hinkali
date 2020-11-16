@@ -220,6 +220,26 @@ label {
   transform: translateY(-4px);
 }
 
+._error {
+  border: 1px solid #ff0f0f !important;
+}
+._error + span {
+  visibility: visible !important;
+}
+
+.item-gradient:hover .circle-gradient {
+  background-color: #eae9e9;
+  background-size: 100% 0;
+}
+
+.circle-gradient {
+  background-repeat: no-repeat;
+  background-color: #eae9e9;
+  background-size: 100% 100%;
+  background-image: linear-gradient(to top, #eae9e9, #ffffff);
+  transition: background-size 0.2s linear, background-color 0.2s linear, background-image 0.2s linear;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -740,12 +760,6 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
   color: #f54500;
   padding-top: 10px;
-}
-.popup-callback__block > input._error {
-  border: 1px solid #ff0f0f;
-}
-.popup-callback__block > input._error + span {
-  visibility: visible;
 }
 .popup-callback__content {
   white-space: normal;
