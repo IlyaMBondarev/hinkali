@@ -228,12 +228,12 @@
       line-height: 11px
       border-radius: 12px 0 0 12px
       background-color: transparent
-    @media (max-width: 450px)
-      font-size: 18px
-      padding: 14px 0
       &:hover
         color: #ffffff
         background-color: $colorbtns
+    @media (max-width: 450px)
+      font-size: 18px
+      padding: 14px 0
     &-more
       padding: 18px 0
       color: #121212
@@ -241,12 +241,12 @@
       line-height: 11px
       border-radius: 0 12px 12px 0
       background-color: transparent
-    @media (max-width: 450px)
-      font-size: 18px
-      padding: 14px 0
       &:hover
         color: #ffffff
         background-color: $colorbtns
+    @media (max-width: 450px)
+      font-size: 18px
+      padding: 14px 0
   &__submit
     margin: 0 auto
     display: block
@@ -296,7 +296,6 @@
     font-size: 24px
     padding: 6px 13px
     box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1)
-    border-radius: 10px 0 0 10px
     border: 1px solid #f8f8f8
     background-color: #ffffff
     margin-left: 6px
@@ -305,6 +304,10 @@
     @media (max-width: 450px)
       padding: 3px 10px
       margin-left: 0
+    &-left
+      border-radius: 10px 0 0 10px
+    &-right
+      border-radius: 0 10px 10px 0
 
   &__slides
     display: flex
