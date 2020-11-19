@@ -2,10 +2,12 @@
 @font-face {
   font-family: "meiryo";
   src: url(../fonts/meiryo.ttc);
+  src: url(../fonts/meiryo.ttf);
 }
 @font-face {
   font-family: "meiryob";
   src: url(../fonts/meiryob.ttc);
+  src: url(../fonts/meiryob.ttf);
 }
 @font-face {
   font-family: "savoye";
@@ -741,9 +743,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .popup-callback__block > label {
   display: block;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
+  position: relative;
 }
-.popup-callback__block > input {
+.popup-callback__block > label input {
+  margin-top: 10px;
   box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   border: 1px solid #f8f8f8;
@@ -755,11 +759,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   text-transform: capitalize;
 }
-.popup-callback__block > input + span {
+.popup-callback__block > label .input-error {
   display: block;
-  visibility: hidden;
-  color: #f54500;
-  padding-top: 10px;
+  top: 114%;
+  left: 0;
 }
 .popup-callback__content {
   white-space: normal;
@@ -1411,6 +1414,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 @media (max-width: 450px) {
   .block__item {
@@ -1421,9 +1425,27 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
   }
 }
+.block__item .input-error {
+  position: absolute;
+  top: 115%;
+  right: 19px;
+  color: #f44601;
+  -webkit-user-select: none;
+  user-select: none;
+  visibility: hidden;
+  white-space: nowrap;
+}
+@media (max-width: 450px) {
+  .block__item .input-error {
+    left: 19px;
+  }
+}
 .block__item-vertical {
   flex-direction: column;
   align-items: flex-start;
+}
+.block__item-vertical .input-error {
+  left: 19px;
 }
 .block__item-vertical label {
   margin-top: 27px;
@@ -1504,7 +1526,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .block__third {
     width: 100%;
     margin-right: 0;
