@@ -1,0 +1,71 @@
+//<подключение общих стилей>
+@import "general.sass"
+@import "null.sass"
+//</подключение общих стилей>
+
+//<оболочка>
+.wrapper
+
+//</оболочка>
+
+//<основная сетка>
+
+.container
+  margin: 0 auto
+  max-width: 1230px
+  padding: 0 15px
+
+//</основная сетка>
+
+//<подключение файлов стилей страниц и элементов>
+@import "header.sass"
+@import "footer.sass"
+@import "products.sass"
+@import "seo.sass"
+//</подключение файлов стилей страниц и элементов>
+
+//<основной блок>
+
+.slider
+  overflow: hidden visible
+  &__slides
+    display: flex
+    overflow: hidden
+    width: 600%
+    margin-left: -100%
+  &__slide
+    position: relative
+    max-width: 100%
+    overflow: hidden
+  &__bg
+    max-width: 100%
+    overflow: hidden
+  &__logo
+    position: absolute
+    max-height: 66%
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+  &__pagination
+    display: flex
+    justify-content: center
+    padding: 24px 0
+    @media (max-width: 600px)
+      padding: 12px 0
+  &__button
+    transition: background-color 0.2s ease
+    background-color: #f4f2f3
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    margin: 0 6px
+    &:hover
+      background-color: $colorbtns
+    &-active
+      background-color: $colorbtns
+    @media (max-width: 600px)
+      width: 10px
+      height: 10px
+
+//</основной блок>
+

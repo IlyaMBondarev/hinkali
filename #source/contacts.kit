@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/contacts.css">
+</head>
+<body>
+<div class="wrapper">
+    <main class="page">
+        <!-- @import "header.html" -->
+        <div class="content">
+            <div class="breadcrumbs container">
+                <div class="breadcrumbs__block">
+                    <a href="index.html" class="breadcrumbs__link wave">главная</a>
+                </div>
+                <div class="breadcrumbs__block">
+                    <a href="basket.html" class="breadcrumbs__link wave">контакты</a>
+                </div>
+            </div>
+            <div class="contacts container">
+                <div class="contacts__title">Контакты <span class="contacts__city">г. <span class="city">Москва</span></span>
+                </div>
+                <div class="contacts__main">
+                    <div class="contacts__left">
+                        <div class="contacts__item">
+                            <p class="contacts__name">Телефон:</p>
+                            <p class="contacts__info city-phone">+7 (495) 507-17-77</p>
+                        </div>
+                        <div class="contacts__item">
+                            <p class="contacts__name">Доставка в:</p>
+                            <p class="contacts__info city-delivery-in">ЦАО, ЗАО, СЗАО, САО, СВАО ВАО, ЮАО, ЮВАО, ЮЗАО</p>
+                        </div>
+                        <div class="contacts__item">
+                            <p class="contacts__name">Время работы доставки:</p>
+                            <p class="contacts__info city-time-to-work">с 10.00 до 22.00</p>
+                        </div>
+                        <div class="contacts__item">
+                            <p class="contacts__name">E-mail:</p>
+                            <p class="contacts__info city-mail">hinkalnaya.ru@gmail.com</p>
+                        </div>
+                        <div class="contacts__item">
+                            <p class="contacts__name">Наши реквизиты:</p>
+                            <p class="contacts__info city-card">р/с 5336 6901 4445 9742</p>
+                        </div>
+                    </div>
+                    <form action="#" class="contacts__right">
+                        <p class="contacts__subtitle">Написать нам:</p>
+                        <div class="block contacts__block">
+                            <div class="block__item block__half block__item-vertical">
+                                <label for="name">Ваше имя:</label>
+                                <input id="name" name="name" type="text">
+                                <span class="input-error">Имя должно быть от 3 до 32 символов!</span>
+                            </div>
+                            <div class="block__item block__half block__item-vertical">
+                                <label for="mail">Ваш e-mail:</label>
+                                <input id="mail" name="mail" type="email">
+                                <span class="input-error">Номер введен неверно!</span>
+                            </div>
+                        </div>
+                        <div class="block__item block__full block__item-vertical">
+                            <label for="message">Ваше собщение:</label>
+                            <textarea id="message"></textarea>
+                            <span class="input-error">Сообщение пустое!</span>
+                        </div>
+                        <button type="submit" class="contacts__send">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <div class="map container">
+                <p class="map__title">Мы на карте</p>
+                <div class="map__main">
+                    <div class="map__locate">
+                        <img class="map__locate-icon" src="img/icons/location.png" alt="icon">
+                        <span class="map__locate-description">Какое-то описание</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="footer-without-border-top">
+            <!-- @import "footer.html" -->
+        </div>
+    </main>
+</div>
+<script src="js/contacts.js"></script>
+<!-- @import "js.html" -->
+</body>
+</html>

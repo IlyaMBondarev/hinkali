@@ -1,0 +1,87 @@
+.select
+  position: relative
+  flex: 1 1 auto
+  box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1)
+  border-radius: 5px
+  border: 1px solid #f8f8f8
+  background-color: #ffffff
+  &-current
+    color: #222121
+    font-size: 16px
+    letter-spacing: 0.49px
+  &-btn
+    position: relative
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: flex-end
+    flex-wrap: nowrap
+    white-space: nowrap
+    background-color: transparent
+    padding: 16px 17px 16px 22px
+    z-index: 3
+    transition: box-shadow 0s linear 0.4s
+    & > i
+      color: #a5a5a5
+      font-size: 20px
+      margin-left: 30px
+      transition: transform 0.4s linear
+  &-drop
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 2
+    border-radius: 5px
+    background-color: #ffffff
+    overflow: hidden
+    padding: 0 17px 0 21px
+    max-height: 53px
+    transition: max-height 0.4s linear, box-shadow 0s linear 0.4s
+    &-opened
+      transition: max-height 0.4s linear
+      box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1)
+      border: 1px solid #f8f8f8
+      max-height: 320px !important
+    &__hor-line
+      margin-top: 53px
+      height: 1px
+      width: 100%
+      background-color: #d9d9d9
+      border-radius: 1px
+    &__list
+      position: relative
+      padding-right: 15px
+      margin-top: 14px
+      max-height: 240px
+      overflow: auto
+      margin-bottom: 18px
+      &::-webkit-scrollbar
+        width: 2px
+        background-color: transparent
+      &::-webkit-scrollbar-thumb
+        background-color: #c4c2c2
+        border-radius: 1px
+      & > li
+        color: #222121
+        font-size: 16px
+        letter-spacing: 0.49px
+        line-height: 22px
+        cursor: pointer
+
+.select-input
+  position: relative
+  flex: 1 1 auto
+  border-radius: 5px
+  border: 1px solid #f8f8f8
+  background-color: #ffffff
+  @media (max-width: 450px)
+    width: 100%
+  &-drop
+    max-height: 45px
+    &__hor-line
+      margin-top: 45px
+  &-btn:focus
+    transition: box-shadow 0s linear 0s
+    border-bottom: none
+    box-shadow: none

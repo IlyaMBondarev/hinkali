@@ -1,0 +1,173 @@
+//<подключение общих стилей>
+@import "general.sass"
+@import "null.sass"
+//</подключение общих стилей>
+
+//<оболочка>
+.wrapper
+
+//</оболочка>
+
+//<основная сетка>
+
+.container
+  margin: 0 auto
+  max-width: 1230px
+  padding: 0 15px
+
+//</основная сетка>
+
+//<подключение файлов стилей страниц и элементов>
+@import "header.sass"
+@import "footer.sass"
+@import "breadcrumbs.sass"
+@import "blocks.sass"
+//</подключение файлов стилей страниц и элементов>
+
+//<основной блок>
+
+.contacts
+  margin-bottom: 50px
+  &__title
+    font-family: 'fradm'
+    color: #121212
+    font-size: 25px
+    letter-spacing: 0.63px
+  &__city
+    color: #636060
+    font-size: 22px
+    letter-spacing: 0.55px
+  &__main
+    box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    border: 1px solid #f8f8f8
+    background-color: #ffffff
+    margin-top: 40px
+    display: flex
+    padding: 37px 40px 35px
+    @media (max-width: 900px)
+      flex-direction: column
+  &__left
+    border-right: 1px solid #d9d9d9
+    padding-right: 30px
+    width: 30%
+    display: flex
+    flex-direction: column
+    min-width: 300px
+    @media (max-width: 900px)
+      border-right: none
+      padding-right: 0
+      width: 100%
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      padding-bottom: 30px
+      border-bottom: 1px solid #d9d9d9
+      min-width: auto
+  &__item
+    margin-bottom: 27px
+    @media (max-width: 900px)
+      width: 47%
+    @media (max-width: 650px)
+      width: 100%
+    @media (max-width: 450px)
+      margin-bottom: 20px
+    &:last-of-type
+      margin-bottom: 0
+  &__name
+    color: #727070
+    font-size: 16px
+    letter-spacing: 0.49px
+    margin-bottom: 12px
+    @media (max-width: 450px)
+      font-size: 12px
+      margin-bottom: 10px
+  &__info
+    font-family: $fontfamilybold
+    color: #000000
+    font-size: 18px
+    letter-spacing: 0.55px
+    line-height: 22px
+    @media (max-width: 450px)
+      font-size: 14px
+  &__right
+    padding-left: 50px
+    width: 70%
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    @media (max-width: 900px)
+      padding-left: 0
+      width: 100%
+      padding-top: 50px
+    @media (max-width: 450px)
+      padding-top: 30px
+      & .block__half
+        margin-bottom: 0
+    & > .block__full
+      flex-grow: 1
+    & label
+      margin-bottom: 10px
+      @media (max-width: 450px)
+        font-size: 12px
+    & textarea
+      min-height: 50px
+      height: 100%
+      @media (max-width: 900px)
+        min-height: 150px
+  &__subtitle
+    font-family: $fontfamilybold
+    color: #000000
+    font-size: 18px
+    letter-spacing: 0.55px
+  &__block
+    margin-bottom: 0
+  &__send
+    display: block
+    color: #ffffff
+    font-size: 15px
+    letter-spacing: 0.35px
+    padding: 9px 55px
+    border-radius: 12px
+    background-color: #e34200
+    margin: 32px auto 0
+
+.map
+  &__title
+    font-family: 'fradm'
+    color: #121212
+    font-size: 25px
+    letter-spacing: 0.63px
+  &__main
+    position: relative
+    margin-top: 35px
+    width: 100%
+    height: 49.5vw
+    max-height: 600px
+    background: url('../img/map-bg.webp') center
+    background-size: cover
+    box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    border: 1px solid #f8f8f8
+  &__locate
+    position: absolute
+  &__locate-icon
+    position: absolute
+    z-index: 50
+  &__locate-description
+    position: absolute
+    display: block
+    top: 10px
+    white-space: nowrap
+    padding-left: 45px
+    font-size: 13px
+    line-height: 27px
+    border-radius: 5px
+    height: 27px
+    background-color: rgba(255, 255, 255, 0.85)
+    padding-right: 8px
+    margin-top: -1px
+    color: #000000
+
+//</основной блок>
+

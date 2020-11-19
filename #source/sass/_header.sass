@@ -1,0 +1,752 @@
+.header
+  padding: 31px 0 21px
+  position: relative
+  @media (max-width: 500px)
+    padding: 15px 0 15px
+  &:first-of-type
+    border-bottom: 1px solid #d9d9d9
+    @media (max-width: 800px)
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      width: 100%
+      z-index: 999
+      background-color: rgba(255, 255, 255, 0.8)
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @media (max-width: 800px)
+      display: none
+    &-mobile
+      display: none
+      @media (max-width: 800px)
+        display: flex
+  &__logo
+    margin-right: 30px
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-grow: 1
+  &__column
+    display: flex
+    flex-direction: column
+  &__left
+    align-items: flex-start
+  &__city-select
+    margin-bottom: 8px
+  &__text
+    color: #121212
+    font-size: 17px
+    font-weight: 400
+    letter-spacing: 0.42px
+    & > span
+      @media (max-width: 1000px)
+        display: block
+        line-height: 24px
+  &__center
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    align-items: center
+    @media (max-width: 950px)
+      position: static
+      left: 0
+      transform: none
+  &__phone
+    font-family: $fontfamilybold !important
+    color: #121212
+    font-size: 23px
+    font-weight: 700
+    letter-spacing: 0.65px
+    padding: 10px 0
+    &:hover
+      color: #f54500
+  &__call-btn
+    padding: 2px 0
+    color: #5e5e5e
+    font-size: 17px
+    font-weight: 400
+    letter-spacing: 0.42px
+    background-color: transparent
+  &__right
+    align-items: flex-end
+  &__link
+    display: block
+    padding: 6px 0
+    text-align: right
+    color: #121212
+    font-size: 17px
+    font-weight: 400
+    letter-spacing: 0.42px
+    transition: color 0.2s
+    &:nth-of-type(2)
+      order: 1
+    &:nth-of-type(3)
+      color: $colorhover
+    &:hover
+      color: $colorhover
+      & ~ *
+        color: #121212
+
+.city-select
+  position: relative
+  &__drop-btn
+    background-color: transparent
+    border: none
+    &:hover > .city-select__current
+      color: $colorhover
+      &:before
+        background-color: $colorhover
+        opacity: 0
+        bottom: -3px
+        &:hover
+          opacity: 1
+          bottom: 0
+    &:hover> .city-select__arrow
+      color: $colorhover
+  &__current
+    position: relative
+    color: #514f4f
+    font-size: 17px
+    font-family: $fontfamilybold
+    letter-spacing: 0.42px
+    &:before
+      position: absolute
+      left: 0
+      width: 100%
+      height: 1px
+      content: ''
+      background-color: #ababab
+      opacity: 1
+      bottom: 0
+      transition: all 0.2s linear
+  &__arrow
+    margin-left: 13px
+    font-size: 13px
+    transition: transform 0.3s linear
+    &-up
+      transform: rotate(180deg)
+  &__drop
+    display: none
+    opacity: 0
+    position: absolute
+    left: -2px
+    background-color: #ffffff
+    box-shadow: 7px 9px 21px 1px rgba(0, 0, 0, 0.1)
+    border-radius: 10px
+    padding: 27px 32px
+    justify-content: space-between
+    z-index: 200
+    transition: opacity 0.3s ease-in-out
+    &-header
+      top: 120%
+    &-footer
+      bottom: 120%
+      @media (max-width: 800px)
+        flex-direction: column
+  &__dropped
+    transition: opacity 0.3s ease-in-out
+    display: flex
+    opacity: 1
+  &__list
+    margin-right: 70px
+    &:last-of-type
+      margin-right: 0
+  &__city
+    color: #222121
+    font-size: 16px
+    line-height: 24px
+    cursor: pointer
+    letter-spacing: 0.49px
+    white-space: nowrap
+    &:hover
+      color: $colorhover
+    &-selected
+      color: $colorhover
+  &__close
+    position: absolute
+    top: 11px
+    right: 11px
+    font-size: 20px
+    color: #a8a7a7
+    background-color: transparent
+    transform: rotate(45deg)
+    &:hover
+      color: #363636
+
+.nav
+  border-bottom: 1px solid #d9d9d9
+  padding: 16px 0 18px
+  box-shadow: 7px 9px 21px 1px rgba(0, 0, 0, 0.1)
+  @media (max-width: 800px)
+    display: none
+  &-mobile
+    display: none
+    @media (max-width: 800px)
+      display: flex
+      margin-top: 134px
+    @media (max-width: 550px)
+      margin-top: 112px
+    @media (max-width: 500px)
+      margin-top: 91px
+    @media (max-width: 400px)
+      margin-top: 76px
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+  &__menu
+    display: flex
+    flex-wrap: nowrap
+    overflow: auto hidden
+    &::-webkit-scrollbar
+      height: 2px
+      background-color: transparent
+    &::-webkit-scrollbar-thumb
+      background-color: #c4c2c2
+      border-radius: 1px
+    & > li
+      margin-right: 20px
+      padding-bottom: 6px
+      position: relative
+      &:after
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+        content: ''
+        background-color: $colorhover
+        opacity: 0
+        transition: all 0.2s linear
+      &:hover:after
+        opacity: 1
+        bottom: 3px
+  &__link
+    font-family: $fontfamilybold
+    color: #363636
+    font-size: 18px
+    font-weight: 700
+    letter-spacing: 0.45px
+  &__cart-btn
+    display: flex
+    align-items: flex-end
+    background-color: transparent
+    position: relative
+    transition: color 0.1s ease
+    &:hover > .nav__total
+      color: $colorhover !important
+  &__phone
+    padding: 8px 11px 2px 14px
+    border-left: 1px solid #d9d9d9
+    border-right: 1px solid #d9d9d9
+    flex-shrink: 0
+    &-link
+      color: #121212
+      font-size: 17px
+      font-family: $fontfamilybold
+      &:hover
+        color: #f54500
+  &__cart-block
+    flex-shrink: 0
+
+#topNav
+  border-bottom: none
+  box-shadow: none
+  position: fixed
+  top: -100%
+  z-index: 500
+  width: 100%
+  background-color: rgba(255, 255, 255, 0.8)
+  transition: top 0.5s ease
+  @media (max-width: 800px)
+    display: none
+  & .nav__menu
+    & > li
+      margin-right: 13px
+  & .nav__link
+    font-size: 16px
+    letter-spacing: 0.4px
+
+.popup-callback
+  position: fixed
+  box-shadow: 7px 9px 21px 1px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  background-color: #ffffff
+  padding: 34px 30px 40px 30px
+  z-index: 500
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  &-bg
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: rgba(255, 255, 255, 0.8)
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 500
+    display: none
+    &-visible
+      display: block
+  &__close
+    position: absolute
+    top: 11px
+    right: 11px
+    font-size: 20px
+    color: #a8a7a7
+    background-color: transparent
+    transform: rotate(45deg)
+    &:hover
+      color: #363636
+  &__form
+    max-width: 280px
+  &__block
+    padding-top: 10px
+    & > label
+      display: block
+      margin-bottom: 20px
+      position: relative
+      & input
+        margin-top: 10px
+        box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        border: 1px solid #f8f8f8
+        background-color: #ffffff
+        color: #222121
+        font-size: 16px
+        letter-spacing: 0.49px
+        padding: 10px 20px
+        width: 100%
+        text-transform: capitalize
+      & .input-error
+        display: block
+        top: 114%
+        left: 0
+
+  &__content
+    white-space: normal
+    color: #727070
+    font-size: 14px
+    letter-spacing: 0.43px
+    line-height: 22px
+    margin-top: 19px
+  &__button
+    margin-top: 33px
+    width: 100%
+    padding: 12px 0 10px
+    color: #ffffff
+    font-size: 20px
+    letter-spacing: 0.61px
+    border-radius: 10px
+    background-color: $colorbtns
+
+.cart-block
+  position: relative
+
+.cart
+  display: none
+  position: absolute
+  right: 0
+  top: 165%
+  box-shadow: 7px 9px 21px 1px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  background-color: #ffffff
+  z-index: 500
+  padding: 30px 13px 30px 30px
+  &-opened
+    display: block
+  &__items
+    max-height: 276px
+    overflow: hidden auto
+    padding-right: 18px
+    &::-webkit-scrollbar
+      width: 10px
+      background-color: transparent
+    &::-webkit-scrollbar-thumb
+      background-color: #d9d9d9
+      border-radius: 5px
+    @media (max-width: 500px)
+      padding-right: 10px
+      &::-webkit-scrollbar
+        width: 6px
+        background-color: transparent
+      &::-webkit-scrollbar-thumb
+        background-color: #d9d9d9
+        border-radius: 3px
+  &__item
+    border-bottom: 1px solid #d9d9d9
+    display: flex
+    justify-content: flex-start
+    padding-bottom: 14px
+    padding-top: 14px
+  &__result
+    display: flex
+    justify-content: space-between
+    margin-right: 28px
+    margin-top: 9px
+    @media (max-width: 500px)
+      align-items: flex-end
+  &__content
+    font-family: $fontfamilybold
+    color: #2f2f2f
+    font-size: 18px
+    letter-spacing: 0.55px
+    @media (max-width: 500px)
+      font-size: 15px
+  &__total
+    font-family: $fontfamilybold
+    color: #2f2f2f
+    font-size: 23px
+    letter-spacing: 0.49px
+    @media (max-width: 500px)
+      font-size: 20px
+  &__button
+    margin-top: 28px
+    margin-right: 20px
+  &__submit
+    margin: 0 auto
+    display: block
+    color: #ffffff
+    font-size: 20px
+    padding: 10px 0
+    font-weight: 400
+    letter-spacing: 0.61px
+    border-radius: 10px
+    background-color: $colorbtns
+    position: relative
+    overflow: hidden
+    text-align: center
+    @media (max-width: 500px)
+      font-size: 14px
+
+.item
+  @media (min-width: 501px)
+    max-height: 92px
+  &__image
+    border-radius: 10px
+    margin-right: 11px
+    & > img
+      border-radius: 10px
+      height: 64px
+  &__info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 220px
+    @media (max-width: 500px)
+      width: 144px
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+  &__name
+    color: #121212
+    font-size: 14px
+    letter-spacing: 0.43px
+    line-height: 12px
+    &:hover
+      color: $colorhover
+    @media (max-width: 500px)
+      font-size: 12px
+  &__clear
+    background-color: transparent
+    display: flex
+    flex-direction: column
+    & > img
+      width: 15px
+    &-roof
+      transform: none
+      transition: transform 0.2s ease
+    &:hover > &-roof
+      transform: rotate(15deg) translateY(-2px)
+  &__counts
+    background-color: #f4f2f3
+    width: 60px
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+    border-radius: 4px
+    & > *
+      width: 100%*1/3
+  &__count
+    text-align: center
+    font-size: 11px
+    color: #121212
+    cursor: default
+    &-less
+      padding: 6px 0
+      color: #121212
+      font-size: 11px
+      line-height: 11px
+      border-radius: 4px 0 0 4px
+      background-color: transparent
+      &:hover
+        color: #ffffff
+        background-color: $colorbtns
+    &-more
+      padding: 6px 0
+      color: #121212
+      font-size: 11px
+      line-height: 11px
+      border-radius: 0 4px 4px 0
+      background-color: transparent
+      &:hover
+        color: #ffffff
+        background-color: $colorbtns
+  &__price
+    color: #121212
+    font-family: $fontfamilybold
+    font-size: 16px
+    @media (max-width: 500px)
+      font-size: 14px
+
+.nav-mobile__phone
+  margin: 0 auto
+  & > a
+    font-family: $fontfamilybold !important
+    color: #121212
+    font-size: 23px
+    font-weight: 700
+    letter-spacing: 0.65px
+    padding: 10px 0
+    &:hover
+      color: #f54500
+    @media (max-width: 500px)
+      font-size: 16px
+
+.header-mobile
+  & .city-select__list
+    max-height: 400px
+    overflow: auto
+    padding-right: 20px
+  &__burger
+    position: relative
+    height: 25px
+  &__logo
+    display: flex
+    align-items: center
+    @media (max-width: 550px)
+      & > .header__logo
+        margin-right: 0
+        & img
+          max-height: 60px
+      & > .header__column
+        display: none
+    @media (max-width: 400px)
+      & > .header__logo img
+        max-height: 45px
+  &__cart
+    flex-shrink: 0
+    &-btn
+      display: flex
+      align-items: flex-end
+      background-color: transparent
+      position: relative
+      transition: color 0.1s ease
+      &:hover > .header-mobile__total
+        color: $colorhover !important
+
+.count
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 50%
+  min-height: 27px
+  min-width: 27px
+  position: absolute
+  left: 18px
+  bottom: 12px
+  color: #ffffff
+  font-size: 15px
+  background-color: #f14600
+
+.total
+  margin-left: 11px
+  font-family: $fontfamilybold
+  color: #514f4f
+  font-size: 18px
+
+.burger-checkbox
+  height: 100%
+  width: 100%
+  display: flex
+  align-items: center
+  & > span
+    display: block
+    margin: 10px
+    height: 2px
+    width: 40px
+    background-color: grey
+    &:before
+      top: 0
+    &:after
+      bottom: 0
+    &:before, &:after
+      content: ''
+      position: absolute
+      left: 10px
+      display: block
+      height: 2px
+      width: 40px
+      background-color: grey
+  &-switch
+    display: none
+    &:checked ~ .burger-menu-bg
+      left: 0
+      opacity: 1
+      transition: opacity 0.3s linear
+      & > .burger-menu
+        margin-left: 0
+        transition: margin-left 0.3s linear 0.3s
+
+.burger-menu
+  padding: 10px
+  box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1)
+  border-radius: 5px
+  border: 1px solid #f8f8f8
+  background-color: rgba(255, 255, 255, 1)
+  max-width: 60%
+  min-height: 50%
+  position: relative
+  margin-left: -100%
+  transition: margin-left 0.3s linear
+  @media (max-width: 450px)
+    max-width: 100%
+  &-bg
+    position: fixed
+    top: 0
+    left: -150%
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+    z-index: 1000
+    background-color: rgba(255, 255, 255, 0.8)
+    opacity: 0
+    transition: opacity 0.3s linear 0.3s, left 0s linear 0.6s
+    & > label
+      position: absolute
+      width: 100%
+      height: 100%
+      display: block
+      opacity: 0
+  &__open-cities
+    display: flex
+    justify-content: center
+    width: 100%
+    font-size: 17px
+    padding: 12px 10px
+    & i
+      color: $colorhover
+      margin-right: 6px
+    &-btn
+      display: none
+      &:checked ~ .burger-menu__cities
+        left: 0
+  &__close-cities
+    padding: 10px
+    font-size: 17px
+    width: 100%
+    border-bottom: 1px solid #d9d9d9
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: transparent
+  &__cities
+    position: absolute
+    top: 0
+    left: -102%
+    width: 100%
+    height: 100%
+    padding: 10px
+    box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    border: 1px solid #f8f8f8
+    background-color: #ffffff
+    transition: all 0.3s linear
+    & ul
+      overflow: auto
+      max-height: 80%
+    & li
+      padding: 10px
+      border-bottom: 1px solid #d9d9d9
+      display: block
+      font-size: 17px
+      font-weight: 400
+      letter-spacing: 0.42px
+      line-height: inherit
+  &__open-list
+    padding: 10px
+    font-size: 17px
+    width: 100%
+    border-top: 1px solid #d9d9d9
+    border-bottom: 1px solid #d9d9d9
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: transparent
+    & span
+      color: $colorhover
+    & i
+      transition: all 0.3s linear
+  &__close-list
+    padding: 10px
+    font-size: 17px
+    width: 100%
+    border-bottom: 1px solid #d9d9d9
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: transparent
+  &__open
+    display: none
+    &:checked + label > i
+      transform: rotate(180deg)
+      color: $colorhover
+    &:checked ~ .burger-menu__list
+      left: 0
+  &__list
+    position: absolute
+    top: 0
+    left: -102%
+    width: 100%
+    height: 100%
+    padding: 10px
+    box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    border: 1px solid #f8f8f8
+    background-color: #ffffff
+    transition: all 0.3s linear
+    & ul
+      overflow: auto
+      max-height: 80%
+    & a
+      padding: 10px
+      border-bottom: 1px solid #d9d9d9
+      display: block
+      color: #121212
+      font-size: 17px
+      font-weight: 400
+      letter-spacing: 0.42px
+  &__link
+    text-align: left
+    padding: 10px
+    border-bottom: 1px solid #d9d9d9
+  &__phone
+    font-family: $fontfamilybold !important
+    color: #121212
+    font-size: 17px
+    font-weight: 700
+    letter-spacing: 0.65px
+    padding: 10px
+  &__text
+    font-size: 14px
+    color: #121212
+    letter-spacing: 0.65px
+    padding: 0 10px

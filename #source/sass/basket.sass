@@ -1,0 +1,381 @@
+//<подключение общих стилей>
+@import "general.sass"
+@import "null.sass"
+//</подключение общих стилей>
+
+//<оболочка>
+.wrapper
+
+//</оболочка>
+
+//<основная сетка>
+
+.container
+  margin: 0 auto
+  max-width: 1230px
+  padding: 0 15px
+
+//</основная сетка>
+
+//<подключение файлов стилей страниц и элементов>
+@import "header.sass"
+@import "footer.sass"
+@import "breadcrumbs.sass"
+@import "select.sass"
+//</подключение файлов стилей страниц и элементов>
+
+//<основной блок>
+
+.basket
+  margin-bottom: 55px
+  &__title
+    font-family: 'fradm'
+    color: #121212
+    font-size: 25px
+    letter-spacing: 0.63px
+  &__metro
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    margin-top: 32px
+    margin-bottom: 40px
+    @media (max-width: 700px)
+      flex-direction: column
+      align-items: flex-start
+      margin-left: 30px
+    @media (max-width: 450px)
+      align-items: center
+      margin-left: 0
+  &__content
+    font-family: $fontfamilybold
+    color: #121212
+    font-size: 20px
+    letter-spacing: 0.61px
+    margin-left: 1.666%
+    margin-right: 2%
+    @media (max-width: 700px)
+      margin: 10px 0
+    @media (max-width: 450px)
+      text-align: center
+  &__select
+    margin-right: 100px
+    @media (max-width: 700px)
+      margin-right: 0
+      width: 75%
+    @media (max-width: 450px)
+      width: 100%
+  &__main
+    box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    background-color: #ffffff
+  &__table
+    width: 100%
+  &__head
+    display: table
+    width: 100%
+    padding-left: 30px
+    padding-right: 19px
+    & .basket__column
+      padding-top: 27px
+      padding-bottom: 0
+    @media (max-width: 800px)
+      display: none
+  &__row
+    display: table
+    width: 100%
+    align-items: flex-start
+    padding-left: 30px
+    padding-right: 19px
+    border-bottom: 1px solid #f8f8f8
+    @media (max-width: 800px)
+      display: block
+      padding-top: 30px
+      padding-bottom: 30px
+    @media (max-width: 400px)
+      padding: 20px 10px
+  &__column
+    display: table-cell
+    text-align: center
+    padding-top: 75px
+    vertical-align: top
+    @media (max-width: 800px)
+      display: block
+      padding-top: 0
+    @media (max-width: 400px)
+      text-align: left
+    &1
+      width: 142px
+      padding-right: 26px
+      padding-top: 55px
+      padding-bottom: 55px
+      @media (max-width: 800px)
+        float: left
+        width: 80px
+        padding: 0
+      @media (max-width: 400px)
+        width: 60px
+    &2
+      text-align: left
+      flex-direction: column
+      width: 39%
+      @media (max-width: 800px)
+        padding-bottom: 10px
+        width: auto
+        margin-left: 100px
+      @media (max-width: 400px)
+        margin-left: 70px
+    &3
+      width: 11%
+      @media (max-width: 800px)
+        display: none
+        width: auto
+    &4
+      width: 15%
+      @media (max-width: 800px)
+        margin-left: 20px
+        width: auto
+        float: left
+      @media (max-width: 400px)
+        margin-left: 70px
+        float: none
+    &5
+      width: 10%
+      @media (max-width: 800px)
+        margin-left: 220px
+        line-height: 1
+        white-space: nowrap
+        width: auto
+      @media (max-width: 400px)
+        margin-left: 70px
+        margin-top: 10px
+        margin-bottom: 10px
+    &6
+      @media (max-width: 800px)
+        margin-left: 70px
+        line-height: 1
+        white-space: nowrap
+      @media (max-width: 400px)
+        margin-left: 70px
+
+  &__bottom
+    border-radius: 0 0 5px 5px
+    background-color: #f4f2f3
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    padding: 43px 40px
+    @media (max-width: 950px)
+      flex-direction: column
+    @media (max-width: 450px)
+      align-items: center
+      padding-left: 0
+      padding-right: 0
+    &-block
+      display: flex
+      align-items: baseline
+      flex-wrap: wrap
+      justify-content: flex-end
+      &:first-of-type
+        margin-right: 48px
+        @media (max-width: 950px)
+          margin-right: 0
+          margin-bottom: 20px
+      @media (max-width: 450px)
+        justify-content: center
+  &__text
+    margin-right: 22px
+    color: #121212
+    font-size: 18px
+    letter-spacing: 0.55px
+    @media (max-width: 400px)
+      margin-right: 15px
+      font-size: 15px
+  &__total
+    color: #121212
+    font-family: $fontfamilybold
+    font-size: 32px
+    letter-spacing: 0.49px
+    @media (max-width: 400px)
+      font-size: 24px
+  &__add-more
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 13px
+    padding-bottom: 13px
+    width: 235px
+    border-radius: 12px
+    border: 1px solid $colorbtns
+    font-size: 18px
+    color: $colorbtns
+    letter-spacing: 0.35px
+    background-color: #ffffff
+    @media (max-width: 950px)
+      margin-bottom: 10px
+  &__confirm
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 13px
+    padding-bottom: 13px
+    width: 235px
+    border-radius: 12px
+    background-color: #d8d8d8
+    font-size: 18px
+    color: #ffffff
+    margin-left: 26px
+    letter-spacing: 0.35px
+    transition: background-color 0.2s linear
+    &:hover
+      background-color: $colorbtns
+    @media (max-width: 550px)
+      margin-left: 0
+
+.basket-item
+  &__image-form
+    position: relative
+    display: inline-block
+    box-shadow: 7px 9px 21px 1px rgba(0, 0, 0, 0.1)
+    border-radius: 10px
+    background-color: #ffffff
+    padding: 3px
+    width: 100%
+    height: 100%
+  &__image-bg
+    position: relative
+    width: 100%
+    height: 100%
+    overflow: hidden
+    border-radius: 10px
+    background: url("../img/no_photo.jpg")
+  &__image
+    width: 100%
+    height: 100%
+    border-radius: 10px
+    transition: transform 0.4s ease
+    &:hover
+      transform: scale(1.2)
+  &__name
+    font-family: $fontfamilybold
+    color: #121212
+    font-size: 16px
+    letter-spacing: 0.49px
+    display: inline
+    @media (max-width: 500px)
+      &:after
+        display: none
+  &__weight
+    margin-top: 13px
+    color: #353434
+    font-family: $fontfamilybold
+    font-size: 16px
+    letter-spacing: 0.49px
+    & > span
+      font-family: $fontfamily
+      color: #121212
+  &__price
+    color: #121212
+    font-size: 16px
+    letter-spacing: 0.49px
+  &__counts
+    background-color: #f4f2f3
+    width: 102px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+    border-radius: 10px
+    @media (max-width: 400px)
+      margin: 0
+    & > *
+      width: 100%*1/3
+  &__count
+    text-align: center
+    font-size: 17px
+    color: #121212
+    cursor: default
+    &-less
+      padding: 9px 0
+      color: #121212
+      font-size: 17px
+      line-height: 11px
+      border-radius: 10px 0 0 10px
+      background-color: transparent
+      &:hover
+        color: #ffffff
+        background-color: $colorbtns
+    &-more
+      padding: 9px 0
+      color: #121212
+      font-size: 17px
+      line-height: 11px
+      border-radius: 0 10px 10px 0
+      background-color: transparent
+      &:hover
+        color: #ffffff
+        background-color: $colorbtns
+  &__price-total
+    font-family: $fontfamilybold
+    color: #121212
+    font-size: 16px
+    letter-spacing: 0.49px
+  &__clear
+    background-color: transparent
+    color: #505050
+    font-size: 16px
+    letter-spacing: 0.49px
+    padding-bottom: 3px
+
+.basket__on-sale,
+.basket__recommend,
+.basket__hit
+  & .basket__action
+    position: absolute
+    white-space: nowrap
+    top: -20px
+    left: -13px
+    height: 45px
+    width: 45px
+    border-radius: 50%
+    display: block
+    z-index: 50
+    &:before
+      position: absolute
+      display: block
+      bottom: 100%
+      background-color: #ffffff
+      box-shadow: 7px 9px 21px 1px rgba(0, 0, 0, 0.2)
+      border-radius: 10px
+      padding: 6px
+      z-index: 55
+      visibility: hidden
+      opacity: 0
+      transition: opacity 0.2s linear 0.2s, visibility 0s linear 0.2s
+    &:hover:before
+      opacity: 1
+      visibility: visible
+
+.basket__on-sale
+  & .basket__action
+    background: url('../img/icons/icon_STOCK.png') center
+    background-size: cover
+    &:before
+      content: 'Акция'
+
+.basket__recommend
+  & .basket__action
+    background: url('../img/icons/icon_RECOMMEND.png') center
+    background-size: cover
+    &:before
+      content: 'Рекомендуем'
+
+.basket__hit
+  & .basket__action
+    background: url('../img/icons/icon_HIT.png') center
+    background-size: cover
+    &:before
+      content: 'Хит продаж'
+
+
+//</основной блок>
+

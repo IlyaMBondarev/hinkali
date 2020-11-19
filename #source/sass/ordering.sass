@@ -1,0 +1,127 @@
+//<подключение общих стилей>
+@import "general.sass"
+@import "null.sass"
+//</подключение общих стилей>
+
+//<оболочка>
+.wrapper
+
+//</оболочка>
+
+//<основная сетка>
+
+.container
+  margin: 0 auto
+  max-width: 1230px
+  padding: 0 15px
+
+//</основная сетка>
+
+//<подключение файлов стилей страниц и элементов>
+@import "header.sass"
+@import "footer.sass"
+@import "breadcrumbs.sass"
+@import "select.sass"
+@import "blocks.sass"
+//</подключение файлов стилей страниц и элементов>
+
+//<основной блок>
+
+
+.ordering
+  &__title
+    font-family: 'fradm'
+    color: #121212
+    font-size: 25px
+    letter-spacing: 0.63px
+  &__main
+    margin-top: 36px
+    margin-bottom: 55px
+    box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    border: 1px solid #f8f8f8
+    background-color: #ffffff
+  &__info
+    padding-left: 108px
+    padding-right: 100px
+    padding-bottom: 43px
+    @media (max-width: 950px)
+      padding-left: 40px
+      padding-right: 40px
+    @media (max-width: 450px)
+      padding-left: 10px
+      padding-right: 10px
+  &__agreement
+    margin-top: 21px
+    color: #222121
+    font-size: 16px
+    letter-spacing: 0.49px
+  &__bottom
+    border-radius: 0 0 5px 5px
+    background-color: #f4f2f3
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    padding: 43px 40px
+    @media (max-width: 950px)
+      flex-direction: column
+    @media (max-width: 450px)
+      align-items: center
+      padding-left: 0
+      padding-right: 0
+  &__column
+    display: flex
+    align-items: baseline
+    &:first-of-type
+      margin-right: 27px
+      @media (max-width: 950px)
+        margin-right: 0
+        margin-bottom: 20px
+  &__text
+    margin-right: 22px
+    color: #121212
+    font-size: 18px
+    letter-spacing: 0.55px
+    @media (max-width: 400px)
+      margin-right: 15px
+      font-size: 15px
+  &__total
+    color: #121212
+    font-family: $fontfamilybold
+    font-size: 32px
+    letter-spacing: 0.49px
+    @media (max-width: 400px)
+      font-size: 24px
+  &__add-more
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 13px
+    padding-bottom: 13px
+    width: 235px
+    border-radius: 12px
+    border: 1px solid $colorbtns
+    font-size: 18px
+    margin-right: 26px
+    color: $colorbtns
+    letter-spacing: 0.35px
+    background-color: #ffffff
+  &__confirm
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 13px
+    padding-bottom: 13px
+    width: 235px
+    border-radius: 12px
+    background-color: $colorbtns
+    font-size: 18px
+    color: #ffffff
+    letter-spacing: 0.35px
+    transition: background-color 0.2s linear
+
+
+
+
+//</основной блок>
+

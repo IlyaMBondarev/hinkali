@@ -1,0 +1,712 @@
+//<подключение общих стилей>
+@import "general.sass"
+@import "null.sass"
+//</подключение общих стилей>
+
+//<оболочка>
+.wrapper
+
+//</оболочка>
+
+//<основная сетка>
+
+.container
+  margin: 0 auto
+  max-width: 1230px
+  padding: 0 15px
+
+.input-error
+  position: absolute
+  top: 115%
+  left: 19px
+  color: #f44601
+  -webkit-user-select: none
+  user-select: none
+  visibility: hidden
+
+.franchise-title
+  font-family: $fontfamilybold
+  color: #444343
+  font-size: 41px
+  text-transform: uppercase
+  text-align: center
+  padding: 0 10px
+  & span
+    color: $colorbtns
+  @media (max-width: 900px)
+    font-size: 35px
+  @media (max-width: 550px)
+    font-size: 24px
+
+.franchise-subtitle
+  font-size: 40px
+  text-align: center
+  color: #444343
+  margin-top: 10px
+  padding: 0 10px
+  @media (max-width: 900px)
+    font-size: 32px
+  @media (max-width: 550px)
+    font-size: 20px
+
+.content
+  overflow: hidden
+
+//</основная сетка>
+
+//<подключение файлов стилей страниц и элементов>
+@import "header.sass"
+@import "footer.sass"
+@import "chiefs.sass"
+//</подключение файлов стилей страниц и элементов>
+
+//<основной блок>
+
+.franchise-banner
+  position: relative
+  min-height: 595px
+  background-color: #faf8f9
+  background-image: url('../img/franchise/bg_first.jpg')
+  background-repeat: no-repeat
+  background-position: 69% 0%
+  @media (max-width: 900px)
+    min-height: 400px
+    background-size: cover
+    background-position: 45% 0%
+  @media (max-width: 600px)
+    min-height: auto
+  @media (max-width: 400px)
+    background-position: 55% 0%
+  & > &__text-block
+    padding-top: 81px
+    width: 100%
+    @media (max-width: 900px)
+      padding-top: 40px
+    @media (max-width: 600px)
+      padding-bottom: 40px
+  &__block
+    color: #444343
+    padding-left: 23px
+    border-left: 1px solid $colorbtns
+    min-height: 86px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @media (max-width: 900px)
+      min-height: auto
+    @media (max-width: 550px)
+      padding-left: 10px
+      min-height: 46px
+  &__title
+    & h2
+      font-family: $fontfamilybold
+      font-size: 30px
+      line-height: 33px
+      text-transform: uppercase
+      & span
+        font-size: 45px
+      @media (max-width: 900px)
+        font-size: 24px
+        & span
+          font-size: 33px
+      @media (max-width: 550px)
+        font-size: 18px
+        line-height: 24px
+        & span
+          font-size: 24px
+      @media (max-width: 400px)
+        font-size: 16px
+        & span
+          font-size: 20px
+    & p
+      font-size: 35px
+      line-height: 36px
+      @media (max-width: 900px)
+        font-size: 28px
+        line-height: 28px
+      @media (max-width: 550px)
+        font-size: 20px
+        line-height: 20px
+  &__subtitle
+    font-size: 30px
+    line-height: 35px
+    text-transform: uppercase
+    margin-top: 59px
+    max-width: 524px
+    @media (max-width: 900px)
+      font-size: 24px
+      line-height: 26px
+      margin-top: 30px
+    @media (max-width: 550px)
+      font-size: 16px
+      line-height: 16px
+  &__content
+    font-size: 30px
+    line-height: 28px
+    margin-top: 50px
+    max-width: 424px
+    @media (max-width: 900px)
+      font-size: 24px
+      line-height: 26px
+      margin-top: 20px
+    @media (max-width: 550px)
+      font-size: 16px
+      line-height: 16px
+
+.info
+  position: relative
+  z-index: 1
+  display: flex
+  justify-content: space-between
+  margin-top: -95px
+  @media (max-width: 900px)
+    margin-top: -50px
+  @media (max-width: 600px)
+    margin-top: 20px
+    flex-wrap: wrap
+  @media (max-width: 400px)
+    justify-content: center
+  &__block
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 214px
+    @media (max-width: 900px)
+      max-width: 20%
+    @media (max-width: 600px)
+      max-width: initial
+      width: 48%
+      margin-bottom: 20px
+    @media (max-width: 400px)
+      width: 80%
+  &__circle
+    width: 170px
+    height: 170px
+    border-radius: 50%
+    box-shadow: 6.5px 8.9px 20.6px 0.4px rgba(0, 0, 0, 0.1)
+    border: solid 3px #ffffff
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 60px
+    color: #424141
+    letter-spacing: -1.5px
+    @media (max-width: 900px)
+      width: 100px
+      height: 100px
+      font-size: 35px
+  &__content
+    font-size: 22px
+    color: #444343
+    line-height: 22px
+    text-align: center
+    margin-top: 19px
+    @media (max-width: 900px)
+      font-size: 16px
+      line-height: 18px
+    &-small
+      font-size: 19px
+      line-height: 18px
+      color: #444343
+      text-align: center
+      @media (max-width: 900px)
+        font-size: 13px
+        line-height: 15px
+
+.franchise-about
+  background-image: url('../img/franchise/povar.png')
+  background-repeat: no-repeat
+  background-position: bottom left
+  background-size: 50%
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  margin-top: 20px
+  padding-bottom: 96px
+  @media (max-width: 600px)
+    background: #ffffff none
+    align-items: center
+  @media (max-width: 550px)
+    padding-bottom: 50px
+  &__title
+    text-align: right
+    margin-top: 68px
+    @media (max-width: 600px)
+      text-align: center
+    @media (max-width: 550px)
+      margin-top: 30px
+  &__content
+    font-size: 22px
+    line-height: 30px
+    text-align: justify
+    color: #444343
+    max-width: 62%
+    margin-top: 40px
+    margin-bottom: 70px
+    @media (max-width: 900px)
+      font-size: 16px
+      line-height: 20px
+      margin-top: 30px
+      margin-bottom: 40px
+    @media (max-width: 600px)
+      max-width: 95%
+  &__link
+    text-align: right
+    color: $colorbtns
+    font-size: 19px
+    letter-spacing: 0.49px
+    display: inline-block
+    padding: 19px
+    border: 1px solid $colorbtns
+    border-radius: 10px
+    background-color: transparent
+    @media (max-width: 900px)
+      font-size: 16px
+      padding: 16px
+    @media (max-width: 550px)
+      padding: 14px 0
+      text-align: center
+      width: 100%
+
+.franchise-request
+  background-color: #faf8f9
+  background-image: url('../img/franchise/bg_zahvat 1.jpg')
+  background-repeat: no-repeat
+  background-position: top right
+  background-size: cover
+  margin-bottom: 81px
+  @media (max-width: 1150px)
+    background-position-x: 60%
+  @media (max-width: 800px)
+    background-position-x: 75%
+  @media (max-width: 600px)
+    background: #faf8f9 none
+  &__block
+    padding-top: 80px
+    padding-bottom: 74px
+    @media (max-width: 600px)
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+    @media (max-width: 550px)
+      padding-top: 30px
+      padding-bottom: 30px
+  &__title
+    font-size: 32px
+    line-height: 42px
+    font-family: $fontfamilybold
+    color: #24262c
+    max-width: 600px
+    min-width: 288px
+    margin-bottom: 19px
+    @media (max-width: 900px)
+      font-size: 28px
+      line-height: 34px
+    @media (max-width: 550px)
+      font-size: 24px
+      line-height: 28px
+  &__subtitle
+    font-size: 22px
+    line-height: 24px
+    color: #484b52
+    max-width: 50%
+    min-width: 350px
+    margin-bottom: 30px
+    @media (max-width: 600px)
+      max-width: initial
+    @media (max-width: 550px)
+      font-size: 16px
+      min-width: 288px
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 400px
+    min-width: 288px
+    & label
+      width: 100%
+      position: relative
+      margin-bottom: 30px
+    & input
+      display: block
+      padding: 15px 19px
+      width: 100%
+      border-radius: 10px
+      box-shadow: 6.5px 8.9px 20.6px 0.4px rgba(0, 0, 0, 0.1)
+      background-color: #ffffff
+      font-size: 20px
+      color: #444343
+      @media (max-width: 550px)
+        font-size: 16px
+        margin-bottom: 20px
+      &::placeholder
+        color: #717070
+    & button
+      color: #ffffff
+      display: inline-block
+      padding: 21px 36px
+      font-size: 24px
+      border-radius: 10px
+      background-color: $colorbtns
+      margin-bottom: 26px
+      @media (max-width: 550px)
+        font-size: 16px
+        padding: 15px 36px
+        margin-bottom: 15px
+    &-agreement, &-agreement *
+      text-align: center
+      color: #302e2e
+      font-size: 16px
+      line-height: 20px
+      letter-spacing: 0.8px
+      @media (max-width: 550px)
+        font-size: 13px
+
+.franchise-chiefs
+  margin-top: 54px
+  & .chiefs__info
+    margin-top: 45px
+  & .chiefs__title
+    font-family: $fontfamilybold
+    color: #444343
+    font-size: 32px
+    margin-bottom: 42px
+    @media (max-width: 550px)
+      font-size: 24px
+      margin-bottom: 25px
+  & .chiefs__block:nth-of-type(2n-1) .chiefs__image-bg > div,
+  & .chiefs__block:nth-of-type(2n) .chiefs__image-bg > div
+    position: absolute
+    top: -50%
+    width: 126%
+    height: 126%
+    border-radius: 50%
+    opacity: 0.35
+    z-index: -2
+    filter: grayscale(1)
+    @media (max-width: 1100px)
+      display: none
+  & .chiefs__block:nth-of-type(2n-1) .chiefs__image-bg > div
+    left: -72%
+  & .chiefs__block:nth-of-type(2n) .chiefs__image-bg > div
+    right: -72%
+
+.franchise-cities
+  min-height: 636px
+  background-image: url(../img/franchise/bg_plane.png)
+  background-position: center -30px
+  background-repeat: no-repeat
+  position: relative
+  margin-bottom: 80px
+  @media (max-width: 1440px)
+    background-size: 125%
+    min-height: 500px
+  @media (max-width: 1024px)
+    min-height: 40vw
+  @media (max-width: 800px)
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    align-items: flex-start
+    margin-top: 30px
+    margin-bottom: 30px
+  @media (max-width: 600px)
+    min-height: 300px
+  @media (max-width: 450px)
+    background: none #faf8f9
+    flex-direction: column
+    min-height: auto
+    align-items: center
+    padding-top: 20px
+  &__block
+    display: inline-block
+    padding: 13px 30px
+    position: absolute
+    @media (max-width: 800px)
+      position: relative
+      top: 0 !important
+      left: 0 !important
+      transform: none !important
+      margin-bottom: 15px
+      margin-left: 10px
+      margin-right: 10px
+      padding: 10px 15px
+    &1
+      top: 17.77%
+      left: 19.375%
+      @media (max-width: 1440px)
+        left: 10%
+      @media (max-width: 1024px)
+        transform: scale(0.5)
+        top: 5vw
+    &2
+      top: 49.7%
+      left: 24.375%
+      @media (max-width: 1440px)
+        left: 18%
+      @media (max-width: 1024px)
+        transform: scale(0.5)
+        top: 17vw
+    &3
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      @media (max-width: 1024px)
+        transform: scale(0.5) translateX(-100%)
+    &4
+      top: 49.7%
+      right: 19.375%
+      @media (max-width: 1440px)
+        right: 13%
+      @media (max-width: 1024px)
+        transform: scale(0.5)
+        top: 17vw
+    &5
+      top: 17.77%
+      right: 14.375%
+      @media (max-width: 1440px)
+        right: 6%
+      @media (max-width: 1024px)
+        transform: scale(0.5)
+        top: 5vw
+  &__icon
+    max-height: 72px
+    @media (max-width: 800px)
+      max-height: 30px
+  &__city-name
+    display: inline-block
+    margin-left: 35px
+    margin-top: 22px
+    font-size: 28px
+    color: #444343
+    text-transform: capitalize
+    @media (max-width: 1440px)
+      margin-left: 20px
+    @media (max-width: 800px)
+      font-size: 14px
+      margin-top: 10px
+      margin-left: 10px
+
+.franchise-round
+  min-height: 75vw
+  background-image: url('../img/franchise/bg_shashlik.png')
+  background-position: 5vw center
+  background-repeat: no-repeat
+  background-size: 56vw
+  position: relative
+  @media (max-width: 900px)
+    background: none #ffffff
+    min-height: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 20px
+    margin-bottom: 30px
+  @media (max-width: 730px)
+    justify-content: center
+  &__block
+    position: absolute
+    top: 50%
+    left: 40vw
+    @media (max-width: 900px)
+      position: relative
+      top: 0
+      left: 0
+      transform: none !important
+      margin-left: 60px
+      margin-right: 15px
+      margin-top: 60px
+      width: 40%
+      & > .franchise-round__item
+        transform: none !important
+    @media (max-width: 730px)
+      width: 90%
+      margin-left: 45px
+    &1
+      transform: rotate(-100deg) translate(30vw, -100%)
+      & .franchise-round__item
+        transform: rotate(100deg)
+      @media (max-width: 1140px)
+        transform: rotate(-110deg) translate(35vw, -100%)
+        & .franchise-round__item
+          transform: rotate(110deg)
+    &2
+      transform: rotate(-40deg) translate(25vw, -100%)
+      & .franchise-round__item
+        transform: rotate(40deg)
+      @media (max-width: 1440px)
+        transform: rotate(-37deg) translate(27vw, -100%)
+        & .franchise-round__item
+          transform: rotate(37deg)
+    &3
+      transform: rotate(0deg) translate(25vw, -100%)
+      & .franchise-round__item
+        transform: rotate(0deg)
+      @media (max-width: 1440px)
+        transform: rotate(0deg) translate(27vw, -100%)
+    &4
+      transform: rotate(40deg) translate(23vw, -100%)
+      & .franchise-round__item
+        transform: rotate(-40deg)
+      @media (max-width: 1440px)
+        transform: rotate(35deg) translate(25vw, -100%)
+        & .franchise-round__item
+          transform: rotate(-35deg)
+    &5
+      transform: rotate(80deg) translate(25vw, -100%)
+      & .franchise-round__item
+        transform: rotate(-80deg)
+      @media (max-width: 1440px)
+        transform: rotate(70deg) translate(27vw, -100%)
+        & .franchise-round__item
+          transform: rotate(-70deg)
+    &6
+      transform: rotate(130deg) translate(27vw, -100%)
+      & .franchise-round__item
+        transform: rotate(-130deg)
+      @media (max-width: 1440px)
+        transform: rotate(140deg) translate(28vw, -100%)
+        & .franchise-round__item
+          transform: rotate(-140deg)
+  &__item
+    position: relative
+  &__number
+    position: absolute
+    top: -70px
+    left: -58px
+    font-family: 'fradm'
+    font-size: 53px
+    color: $colorbtns
+    width: 90px
+    height: 90px
+    display: flex
+    justify-content: center
+    align-items: center
+    box-shadow: 2.9px 4px 5.9px 0.1px rgba(0, 0, 0, 0.1)
+    border: solid 1px #ebe8e8
+    border-radius: 50%
+    @media (max-width: 1335px)
+      top: -41px
+      left: -39px
+      font-size: 35px
+      width: 60px
+      height: 60px
+  &__title
+    position: relative
+    font-size: 31px
+    font-family: $fontfamilybold
+    color: #444343
+    margin-bottom: 19px
+    max-width: 380px
+    @media (max-width: 1335px)
+      font-size: 24px
+      margin-bottom: 15px
+      max-width: 330px
+    @media (max-width: 730px)
+      max-width: initial
+      text-align: center
+    @media (max-width: 550px)
+      font-size: 20px
+  &__content
+    font-size: 19px
+    color: #444343
+    line-height: 24px
+    max-width: 330px
+    @media (max-width: 1335px)
+      font-size: 16px
+      line-height: 20px
+    @media (max-width: 730px)
+      max-width: initial
+      text-align: center
+    @media (max-width: 550px)
+      font-size: 16px
+
+
+.franchise-consult
+  background-color: #faf8f9
+  padding-top: 80px
+  padding-bottom: 75px
+  @media (max-width: 1024px)
+    padding-top: 30px
+    padding-bottom: 30px
+  &__title
+    text-align: center
+    font-family: $fontfamilybold
+    font-size: 32px
+    color: #24262c
+    line-height: 40px
+    & span
+      text-transform: uppercase
+      color: $colorbtns
+    @media (max-width: 900px)
+      font-size: 26px
+      line-height: 30px
+    @media (max-width: 550px)
+      font-size: 20px
+      line-height: 24px
+  &__subtitle
+    text-align: center
+    font-size: 28px
+    color: #484b52
+    margin-top: 20px
+    @media (max-width: 900px)
+      font-size: 24px
+    @media (max-width: 550px)
+      font-size: 16px
+  &__form
+    margin-top: 40px
+    margin-bottom: 40px
+    display: flex
+    justify-content: space-between
+    & label
+      position: relative
+      width: 30%
+    & input
+      width: 100%
+      display: block
+      padding: 15px 19px
+      font-size: 20px
+      color: #444343
+      text-transform: capitalize
+      border-radius: 10px
+      box-shadow: 6.5px 8.9px 20.6px 0.4px rgba(0, 0, 0, 0.1)
+      background-color: #ffffff
+      &::placeholder
+        color: #717070
+    & button
+      width: 30%
+      font-size: 24px
+      color: #ffffff
+      background-color: $colorbtns
+      border-radius: 10px
+      padding: 18px 0
+    @media (max-width: 1024px)
+      flex-direction: column
+      align-items: center
+      width: 50%
+      margin: 40px auto
+      max-width: 500px
+      min-width: 300px
+      & label
+        width: 100%
+        margin-bottom: 20px
+      & button
+        width: 100%
+    @media (max-width: 550px)
+      & input, & button
+        font-size: 16px
+  &__agreement
+    text-align: center
+    font-size: 16px
+    letter-spacing: 0.8px
+    color: #302e2e
+    & a
+      color: #302e2e
+    @media (max-width: 550px)
+      font-size: 13px
+
+
+
+//</основной блок>
+
