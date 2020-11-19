@@ -357,9 +357,17 @@ carts.forEach(cart => {
     let button = cart.querySelector('.cart-btn');
     let cartBlock = cart.querySelector('.cart');
     button.addEventListener('click', () => cartBlock.classList.toggle('cart-opened'));
+});
+
+document.addEventListener('click', (event) => {
+    let target = event.target;
+    carts.forEach(cart => {
+        let cartBlock = cart.querySelector('.cart');
+        if (target !== cart && !(cart.contains(target))) {
+            cartBlock.classList.remove('cart-opened');
+        }
+    })
 })
-
-
 
 const isMobile = window.navigator.userAgent.match(/Mobile/) && window.navigator.userAgent.match(/Mobile/)[0] === "Mobile";
 const event = isMobile ? "touchstart" : "mouseover";
@@ -450,8 +458,15 @@ document.querySelectorAll('.addToCart').forEach(button => {
         let baseCss = `position: absolute;
                                     width: 40px;
                                     height: 40px;
-                                    background: url(img/icons/icon_HIT.png);
-                                    background-size: cover;
+                                    color: #ffffff;
+                                    user-select: none;
+                                    white-space: nowrap;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 18px;
+                                    background-color: #f44601;
+                                    border-radius: 50%;
                                     z-index: 999;
                                     transform: scale(0) translate(-50%,-50%);
                                     left: ${xBegin}px;
@@ -461,8 +476,15 @@ document.querySelectorAll('.addToCart').forEach(button => {
         let lateCss = `position: absolute;
                                     width: 40px;
                                     height: 40px;
-                                    background: url(img/icons/icon_HIT.png);
-                                    background-size: cover;
+                                    color: #ffffff;
+                                    user-select: none;
+                                    white-space: nowrap;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 18px;
+                                    background-color: #f44601;
+                                    border-radius: 50%;
                                     z-index: 999;
                                     transition: transform 0.3s linear 0s, top 0.7s linear 0.3s, left  0.7s linear 0.3s, opacity 0.3s linear 1s;
                                     transform: scale(1) translate(-50%,-50%);
@@ -472,6 +494,7 @@ document.querySelectorAll('.addToCart').forEach(button => {
 
         let iconToCart = document.createElement('span');
         iconToCart.style.cssText = baseCss;
+        iconToCart.textContent = '+1';
 
         body.appendChild(iconToCart);
 
