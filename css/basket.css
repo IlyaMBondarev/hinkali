@@ -1777,7 +1777,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   color: #f44601;
   letter-spacing: 0.35px;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 @media (max-width: 950px) {
   .basket__add-more {
