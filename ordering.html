@@ -21,9 +21,12 @@
                     <label for="burger"></label>
                     <div class="burger-menu">
                         <input type="checkbox" id="mobileCities" class="burger-menu__open-cities-btn">
-                        <label for="mobileCities" class="burger-menu__open-cities"><i class="fa fa-map-marker-alt"></i><span class="city-select__current">Москва</span></label>
+                        <label for="mobileCities" class="burger-menu__open-cities"><i
+                                class="fa fa-map-marker-alt"></i><span
+                                class="city-select__current">Москва</span></label>
                         <div class="burger-menu__cities _scroll">
-                            <label for="mobileCities" class="burger-menu__close-cities"><i class="fa fa-chevron-left"></i><span>Назад</span><span></span></label>
+                            <label for="mobileCities" class="burger-menu__close-cities"><i
+                                    class="fa fa-chevron-left"></i><span>Назад</span><span></span></label>
                             <ul>
                                 <li class="city-select__city city-select__city-selected" data-city="Moscow">Москва</li>
                                 <li class="city-select__city" data-city="St. Petersburg">Санкт-Петербург</li>
@@ -48,9 +51,11 @@
                             <button class="scroll-down"><i class="fa fa-chevron-down"></i></button>
                         </div>
                         <input type="checkbox" id="mobileMenu" class="burger-menu__open">
-                        <label for="mobileMenu" class="burger-menu__open-list"><span>Меню</span><i class="fa fa-chevron-right"></i></label>
+                        <label for="mobileMenu" class="burger-menu__open-list"><span>Меню</span><i
+                                class="fa fa-chevron-right"></i></label>
                         <div class="burger-menu__list _scroll">
-                            <label for="mobileMenu" class="burger-menu__close-list"><i class="fa fa-chevron-left"></i><span>Назад</span><span></span></label>
+                            <label for="mobileMenu" class="burger-menu__close-list"><i
+                                    class="fa fa-chevron-left"></i><span>Назад</span><span></span></label>
                             <ul>
                                 <li><a href="catalog.html">Хинкали</a></li>
                                 <li><a href="catalog.html">Хачапури</a></li>
@@ -605,15 +610,16 @@
         <button class="popup-callback__close">+</button>
         <form action="#" class="popup-callback__form" id="popupCallbackForm">
             <div class="popup-callback__block">
-                <label for="popupCallbackName">Ваше имя:</label>
-                <input id="popupCallbackName" type="text" placeholder="Анастасия" class="_req">
-                <span>Имя должно быть от 3 до 32 символов!</span>
-            </div>
+                <label for="popupCallbackName">Ваше имя:
+                    <input id="popupCallbackName" type="text" placeholder="Анастасия" class="_req">
+                    <span class="input-error">Имя должно быть от 3 до 32 символов!</span>
+                </label></div>
             <div class="popup-callback__block">
-                <label for="popupCallbackPhone">Телефон:</label>
-                <input id="popupCallbackPhone" type="tel" placeholder="+7 (926) 000-00-00" class="_req _phone masked">
-                <span>Номер введен неверно!</span>
-            </div>
+                <label for="popupCallbackPhone">Телефон:
+                    <input id="popupCallbackPhone" type="tel" placeholder="+7 (926) 000-00-00"
+                           class="_req _phone masked">
+                    <span class="input-error">Номер введен неверно!</span>
+                </label></div>
             <!-- <p class="popup-callback__content">Наш оператор свяжется с Вами для уточнения деталей заказа.</p> -->
             <button class="popup-callback__button" type="submit">оставить заявку</button>
         </form>
@@ -639,16 +645,19 @@
                             <div class="block__item block__half">
                                 <label for="name">Имя*</label>
                                 <input id="name" name="name" type="text">
+                                <span class="input-error">Имя должно быть от 3 до 32 символов!</span>
                             </div>
                             <div class="block__item block__half">
                                 <label for="mail">E-mail*</label>
                                 <input id="mail" name="mail" type="email">
+                                <span class="input-error">Почта введена неверно!</span>
                             </div>
                         </div>
                         <div class="ordering__block block">
                             <div class="block__item block__half">
                                 <label for="phone">Телефон*</label>
                                 <input id="phone" name="phone" type="tel">
+                                <span class="input-error">Номер введен неверно!</span>
                             </div>
                         </div>
                         <p class="block__title">Адрес доставки:</p>
@@ -699,16 +708,19 @@
                                     </div>
                                     <input id="street" name="street" type="text" class="select-btn select-input-btn select-current">
                                 </div>
+                                <span class="input-error">Адрес введен неверно!</span>
                             </div>
                         </div>
                         <div class="ordering__block block">
                             <div class="block__item block__third">
                                 <label for="house">Дом*</label>
                                 <input id="house" name="house" type="text">
+                                <span class="input-error">Адрес введен неверно!</span>
                             </div>
                             <div class="block__item block__third">
                                 <label for="apartment">Кв./Офис*</label>
                                 <input id="apartment" name="apartment" type="text">
+                                <span class="input-error">Адрес введен неверно!</span>
                             </div>
                             <div class="block__item block__third">
                                 <label for="floor">Этаж</label>
