@@ -240,5 +240,14 @@ carts.forEach(cart => {
     let button = cart.querySelector('.cart-btn');
     let cartBlock = cart.querySelector('.cart');
     button.addEventListener('click', () => cartBlock.classList.toggle('cart-opened'));
-})
+});
 
+document.addEventListener('click', (event) => {
+    let target = event.target;
+    carts.forEach(cart => {
+        let cartBlock = cart.querySelector('.cart');
+        if (target !== cart && !(cart.contains(target))) {
+            cartBlock.classList.remove('cart-opened');
+        }
+    })
+})
