@@ -75,6 +75,8 @@ var sliderTeam = (function(document, $) {
                     e.preventDefault();
                     _stopMove(i);
                     _moveIt($this, i);
+                    $isAuto = true;
+                    autoSlider = requestInterval(_autoMove, $acAuto);
                 });
             });
 
