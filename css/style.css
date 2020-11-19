@@ -5437,8 +5437,9 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 900px) {
   .franchise-banner {
     min-height: 400px;
-    background-size: cover;
-    background-position: 45% 0%;
+    background-size: contain;
+    background-image: url("../img/franchise/bg_first-mobile.png");
+    background-position: 135% 0%;
   }
 }
 @media (max-width: 600px) {
@@ -5446,9 +5447,16 @@ h1, h2, h3, h4, h5, h6 {
     min-height: auto;
   }
 }
+@media (max-width: 500px) {
+  .franchise-banner {
+    background-position: 140% center;
+    background-size: 50%;
+  }
+}
 @media (max-width: 400px) {
   .franchise-banner {
-    background-position: 55% 0%;
+    background-position: 240% center;
+    background-size: 75%;
   }
 }
 .franchise-banner > .franchise-banner__text-block {
@@ -5479,10 +5487,20 @@ h1, h2, h3, h4, h5, h6 {
     min-height: auto;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .franchise-banner__block {
     padding-left: 10px;
     min-height: 46px;
+  }
+}
+@media (max-width: 600px) {
+  .franchise-banner__title {
+    max-width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .franchise-banner__title {
+    max-width: 220px;
   }
 }
 .franchise-banner__title h2 {
@@ -5502,7 +5520,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 33px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .franchise-banner__title h2 {
     font-size: 18px;
     line-height: 24px;
@@ -5529,10 +5547,16 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 28px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .franchise-banner__title p {
     font-size: 20px;
     line-height: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .franchise-banner__title p {
+    font-size: 17px;
+    line-height: 17px;
   }
 }
 .franchise-banner__subtitle {
@@ -5549,10 +5573,18 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 30px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .franchise-banner__subtitle {
     font-size: 16px;
     line-height: 16px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .franchise-banner__subtitle {
+    font-size: 14px;
+    line-height: 14px;
+    max-width: 220px;
   }
 }
 .franchise-banner__content {
@@ -5568,10 +5600,18 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 20px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .franchise-banner__content {
     font-size: 16px;
     line-height: 16px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .franchise-banner__content {
+    font-size: 14px;
+    line-height: 14px;
+    max-width: 220px;
   }
 }
 
