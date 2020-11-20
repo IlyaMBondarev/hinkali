@@ -71,10 +71,30 @@ var sliderTeam = (function(document, $) {
 
             $.each($listItems, function(i) {
                 var $this = $(this);
-                $this.on('touchstart click', function(e) {
+                let xStart, xEnd;
+                $this.on('click', function(e) {
                     e.preventDefault();
                     _stopMove(i);
                     _moveIt($this, i);
+                    $isAuto = true;
+                    autoSlider = requestInterval(_autoMove, $acAuto);
+                });
+                $this.on('touchstart', function(e) {
+                    e.preventDefault();
+                    xStart = e.changedTouches[0].clientX;
+                    clearRequestInterval(autoSlider);
+                    $isAuto = false;
+                });
+                $this.on('touchend', function(e) {
+                    e.preventDefault();
+                    xEnd = e.changedTouches[0].clientX;
+                    if (xEnd < xStart && i < $listItems.length - 1) {
+                        _stopMove(i+1);
+                    } else if (xEnd > xStart && i > 0) {
+                        _stopMove(i-1);
+                    } else {
+                        _stopMove(i);
+                    }
                     $isAuto = true;
                     autoSlider = requestInterval(_autoMove, $acAuto);
                 });
